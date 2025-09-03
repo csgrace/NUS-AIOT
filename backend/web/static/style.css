@@ -1,0 +1,1982 @@
+/* ====== MAIN LAYOUT ====== */
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #1cc88a;
+    --danger-color: #e74a3b;
+    --warning-color: #f6c23e;
+    --dark-color: #5a5c69;
+    --light-color: #f8f9fc;
+    --background-main: var(--light-color);
+    --background-sidebar: linear-gradient(180deg, var(--primary-color) 0%, #224abe 100%);
+    --background-header: white;
+    --background-card: white;
+    --background-switch-day: linear-gradient(90deg, #4e73df 0%, #b4e6ff 100%);
+    --background-switch-night: linear-gradient(90deg, #33384c 0%, #1b2535 100%);
+    --text-main: #333;
+    --text-dark: var(--dark-color);
+    --text-sidebar: #fff;
+    --star-color: #fffbe6;
+    --moon-color: #f7ecb5;
+}
+body {
+    background-color: var(--background-main);
+    color: var(--text-main);
+    transition: background 0.3s, color 0.3s;
+}
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+/* ===== 夜间模式主题 ===== */
+body.night-mode {
+    --background-main: #232b3b;
+    --background-sidebar: linear-gradient(180deg, #181d29 0%, #151924 100%);
+    --background-header: #222b3a;
+    --background-card: #242d3a;
+    --primary-color: #3e62a9;
+    --secondary-color: #2ca58d;
+    --text-main: #eaeef4;
+    --text-dark: #c0cbe2;
+    --text-sidebar: #d0e0ff;
+    --star-color: #fffbe6;
+    --moon-color: #f7ecb5;
+}
+body.night-mode .sidebar {
+    background: var(--background-sidebar);
+    color: var(--text-sidebar);
+}
+body.night-mode .main-content {
+    background: var(--background-main);
+    color: var(--text-main);
+}
+body.night-mode .content-header {
+    background: var(--background-header);
+    border-bottom: 1px solid #27324a;
+}
+body.night-mode .welcome-message h2,
+body.night-mode .content-header h1 {
+    color: var(--text-dark);
+}
+body.night-mode .data-card {
+    background: var(--background-card);
+    color: var(--text-main);
+}
+body.night-mode .date-display {
+    background: #1a2230;
+    color: var(--text-main);
+}
+body.night-mode .welcome-icon {
+    color: var(--primary-color);
+}
+body.night-mode .submenu li:hover {
+    background-color: rgba(44, 165, 141, 0.12);
+    color: var(--secondary-color);
+}
+/* ====== SIDEBAR STYLES ====== */
+.sidebar {
+    width: 250px;
+    background: var(--background-sidebar);
+    color: var(--text-sidebar);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+.logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 0 28px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    letter-spacing: 1px;
+}
+.nav-menu {
+    list-style: none;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0 20px;
+}
+.nav-item {
+    margin-bottom: 8px;
+}
+.nav-header {
+    padding: 14px 16px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1.07rem;
+    font-weight: 600;
+    user-select: none;
+}
+.nav-header:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+.arrow {
+    transition: transform 0.3s;
+    font-size: 1rem;
+}
+/* Submenu: hidden by default, expands on .active */
+.submenu {
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding-left: 20px;
+}
+.submenu li {
+    padding: 9px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    font-size: 0.98rem;
+    margin-bottom: 2px;
+}
+.submenu li:hover {
+    background-color: rgba(255,255,255,0.13);
+    color: var(--secondary-color);
+}
+.nav-item.active .submenu {
+    max-height: 400px;
+}
+.nav-item.active .arrow.fa-chevron-right {
+    transform: rotate(90deg);
+}
+.user-profile {
+    padding: 18px;
+    border-top: 1px solid rgba(255,255,255,0.13);
+    display: flex;
+    align-items: center;
+}
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 11px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+.username {
+    font-weight: 700;
+    font-size: 1.02rem;
+}
+.user-status {
+    font-size: 0.78rem;
+    opacity: 0.8;
+}
+/* ====== MAIN CONTENT STYLES ====== */
+.main-content {
+    flex-grow: 1;
+    padding: 26px 38px;
+    overflow-y: auto;
+    background: var(--background-main);
+    color: var(--text-main);
+    transition: background 0.3s, color 0.3s;
+}
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e3e6f0;
+    background: var(--background-header);
+    transition: background 0.3s;
+}
+.content-header h1 {
+    color: var(--text-dark);
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.date-display {
+    background-color: var(--background-header);
+    padding: 8px 20px;
+    border-radius: 6px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58,59,69,0.09);
+    font-size: 1.04rem;
+    color: var(--text-dark);
+    transition: background 0.3s, color 0.3s;
+}
+.welcome-message {
+    text-align: center;
+    margin-top: 64px;
+    display: none; /* Only .active is shown */
+}
+.welcome-icon {
+    font-size: 3.25rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+.welcome-message h2 {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+.welcome-message p {
+    color: #858796;
+    max-width: 520px;
+    margin: 0 auto;
+}
+.welcome-message.active {
+    display: block;
+}
+.content-section {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.content-section.active {
+    display: block;
+}
+/* 重点：步数区块行布局 */
+#steps .sensor-data,
+#hr-monitor .sensor-data,
+#water-records .sensor-data,
+#water-reminder .sensor-data,
+#calorie-estimation .sensor-data,
+#diet-suggestion .sensor-data {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+#steps .data-row,
+#hr-monitor .sensor-data,
+#diet-suggestion .sensor-data {
+    display: flex;
+    gap: 22px;
+    width: 100%;
+}
+#steps .data-row .data-card,
+#hr-monitor .data-card,
+#diet-suggestion .data-card {
+    flex: 1 1 0;
+    min-width: 180px;
+}
+#steps .data-card-full {
+    flex: 1 1 100%;
+}
+/* 其它sensor-data保持原有grid布局 */
+.sensor-data:not(.data-row) {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+.data-card {
+    background-color: var(--background-card);
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58,59,69,0.10);
+    text-align: center;
+    color: inherit;
+    transition: background 0.3s, color 0.3s;
+    margin-bottom: 0;
+}
+.data-value {
+    font-size: 2.15rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.data-label {
+    color: #858796;
+    font-size: 1.01rem;
+    margin-bottom: 6px;
+}
+.action-btn {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    outline: none;
+    height: 44px;
+    padding: 0px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.08rem;
+    margin-top: 10px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.action-btn:hover {
+    background: var(--secondary-color);
+}
+.input-field {
+    width: 80%;
+    padding: 7px 10px;
+    border: 1px solid #d4d9e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+textarea.input-field {
+    width: 96%;
+    min-height: 40px;
+    resize: vertical;
+}
+.suggestion {
+    font-size: 1.04rem;
+    color: #21a6b1;
+    margin-top: 10px;
+}
+.history-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    justify-content: center;
+}
+.history-btn {
+    padding: 5px 8px;
+    font-size: 1.1rem;
+    min-width: 36px;
+    min-height: 36px;
+}
+.history-list {
+    margin-top: 6px;
+    max-height: 130px;
+    overflow-y: auto;
+    background: #f7f8fa;
+    border-radius: 6px;
+    padding: 6px;
+    color: #244;
+    font-size: 1rem;
+}
+
+/* 无报警时的绿色背景和居中 */
+.alarm-no-abnormal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 0 18px 0;
+    font-size: 1.12em;
+    color: #21a96b;
+    font-weight: bold;
+    gap: 12px;
+}
+
+.alarm-no-abnormal-icon {
+    font-size: 1.8em;
+    margin-right: 8px;
+}
+
+.alarm-no-abnormal-text {
+    font-size: 1.11em;
+    letter-spacing: 1px;
+}
+
+.alarm-no-abnormal-bg {
+    border: 1.5px solid #21a96b !important;
+    background: #eafff2;
+    border-radius: 8px;
+    transition: background 0.3s, border 0.3s;
+}
+
+/* 有报警时的红色边框 */
+.alarm-has-abnormal {
+    border: 1.5px solid var(--danger-color) !important;
+    background: #fff5f3;
+    border-radius: 8px;
+    transition: background 0.3s, border 0.3s;
+}
+
+/* 异常记录列表容器 - 位于报警模块下方 */
+#abnormal-records-container {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--background-card);
+    border: 1px solid var(--danger-color);
+    border-radius: 8px;
+    font-size: 0.9em;
+    color: var(--text-main);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* 列表标题 */
+.abnormal-list-header {
+    font-weight: bold;
+    color: var(--danger-color);
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed var(--danger-color);
+}
+
+/* 异常记录条目 */
+.abnormal-record-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+/* 时间和数值的样式 */
+.abnormal-record-item .record-time {
+    color: var(--text-dark);
+}
+
+.abnormal-record-item .record-value {
+    font-weight: bold;
+    color: var(--danger-color);
+}
+
+
+.meal-icon {
+    font-size: 1.6em;
+    vertical-align: middle;
+    margin-left: 8px;
+    margin-right: 2px;
+}
+.intake-result {
+    display: inline-block;
+    font-size: 1.07em;
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #21a6b1;
+}
+.hidden {
+    display: none !important;
+}
+
+/* 增强日历、按钮等对齐的体验 */
+#diet-date-picker {
+    min-width: 160px;
+    margin-bottom: 10px;
+}
+
+/* Calorie Estimation: 居中图片和按钮，提示分隔 */
+.preview-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btn-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+.status-row {
+    text-align: center;
+    margin: 8px 0 0 0;
+    min-height: 24px;
+    font-size: 1.02em;
+}
+.status-row.error {
+    color: #e74c3c;
+}
+.status-row.success {
+    color: #21a6b1;
+}
+.status-row.warn {
+    color: #f6c23e;
+}
+
+/* ========== Routine 地图相关样式 ========== */
+#routine-map-container {
+    width: 100%;
+    height: 480px; /* 原本是 320px，改为更大 */
+    position: relative;
+}
+#routine-map {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;  /* 提高最小高度，确保能加载完整瓦片 */
+    border-radius: 8px;
+    border: 1px solid #d4d9e1;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58,59,69,0.08);
+    z-index: 1;
+}
+.routine-map-msg {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    z-index: 1000;
+    pointer-events: none;
+    box-shadow: 0 2px 8px 0 rgba(50,50,50,0.12);
+}
+body.night-mode #routine-map-container {
+    background: #1a2230;
+}
+body.night-mode #routine-map {
+    filter: brightness(0.87) contrast(1.12);
+    border-color: #444d62;
+}
+body.night-mode .routine-map-msg {
+    background: rgba(44, 53, 71, 0.92);
+    color: #eaeef4;
+}
+
+
+/* ================== Bili风格 Day/Night Switch ================== */
+
+.bili-switch-global {
+  display: inline-block;
+  width: 120px;
+  height: 54px;
+  vertical-align: middle;
+}
+.bili-switch-global input[type="checkbox"] {
+  display: none;
+}
+.bili-switch-global .slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  height: 48px;
+  border-radius: 28px;
+  border: 3px solid #3279ed;
+  background: linear-gradient(90deg, #eaf4ff 0%, #d3edff 70%);
+  box-shadow: 0 2px 16px 0 rgba(44, 120, 255, 0.10);
+  position: relative;
+  transition: background 0.3s, border-color 0.3s;
+  cursor: pointer;
+  overflow: visible;
+}
+.bili-switch-global .icon {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.bili-switch-global .sun-part {
+  margin-left: 4px;
+}
+.bili-switch-global .moon-part {
+  margin-right: 4px;
+}
+.bili-switch-global .sun-glow {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: radial-gradient(rgba(255, 220, 90, 0.40) 60%, transparent 90%);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.9;
+  filter: blur(0.5px);
+}
+.bili-switch-global .sun {
+  position: relative;
+  z-index: 2;
+}
+.bili-switch-global .moon {
+  position: relative;
+  z-index: 2;
+}
+/* 新版星星SVG样式：定位和缩放 */
+.bili-switch-global .star {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.75;
+  filter: none;
+}
+.bili-switch-global .moon-part .star1 {
+  right: 2px;
+  top: 5px;
+  width: 11px;
+  height: 11px;
+}
+.bili-switch-global .moon-part .star2 {
+  right: 18px;
+  top: 25px;
+  width: 8px;
+  height: 8px;
+}
+.bili-switch-global .moon-part .star3 {
+  right: 7px;
+  top: 33px;
+  width: 6px;
+  height: 6px;
+}
+.bili-switch-global input[type="checkbox"]:checked + .slider .moon,
+.bili-switch-global input[type="checkbox"]:checked + .slider .star {
+  opacity: 0.18;
+  filter: blur(2.5px);
+}
+.bili-switch-global input[type="checkbox"]:checked + .slider .sun,
+.bili-switch-global input[type="checkbox"]:checked + .slider .sun-glow {
+  opacity: 1;
+  filter: none;
+}
+.bili-switch-global input[type="checkbox"]:not(:checked) + .slider .moon,
+.bili-switch-global input[type="checkbox"]:not(:checked) + .slider .star {
+  opacity: 1;
+  filter: none;
+}
+.bili-switch-global input[type="checkbox"]:not(:checked) + .slider .sun,
+.bili-switch-global input[type="checkbox"]:not(:checked) + .slider .sun-glow {
+  opacity: 0.35;
+  filter: blur(2.5px);
+}
+.bili-switch-global .toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.38);
+  box-shadow: 0 1px 6px 0 rgba(80, 130, 255, 0.16);
+  transition: left 0.32s cubic-bezier(.42,0,.58,1.0), background 0.3s;
+  z-index: 1;
+  backdrop-filter: blur(1.5px);
+  border: 1.5px solid #e1eaf8;
+}
+.bili-switch-global input[type="checkbox"]:checked + .slider .toggle-knob {
+  left: 2px;
+  background: rgba(255,255,255,0.21);
+}
+.bili-switch-global input[type="checkbox"]:not(:checked) + .slider .toggle-knob {
+  left: 74px;
+  background: rgba(35,43,59,0.24);
+}
+body.night-mode .bili-switch-global .slider {
+  background: linear-gradient(90deg, #21314e 0%, #3d5a77 90%);
+  border-color: #a5e0e1;
+}
+body.night-mode .bili-switch-global .toggle-knob {
+  background: rgba(35,43,59,0.24);
+}
+body.night-mode .bili-switch-global input[type="checkbox"]:checked + .slider .toggle-knob {
+  background: rgba(255,255,255,0.21);
+}
+body.night-mode .bili-switch-global input[type="checkbox"]:not(:checked) + .slider .toggle-knob {
+  background: rgba(35,43,59,0.24);
+}
+/* 响应式适配 */
+@media (max-width: 600px) {
+    .global-switch-row {
+        top: 10px;
+        right: 10px;
+        padding: 4px 5px;
+    }
+    .bili-switch-global {
+        width: 70px;
+        height: 34px;
+    }
+    .bili-switch-global .slider:before,
+    .bili-switch-global .slider:after {
+        width: 28px;
+        height: 28px;
+        top: 2px;
+        left: 2px;
+    }
+    .bili-switch-global .slider .sun {
+        left: 6px;
+        top: 6px;
+        width: 12px;
+        height: 12px;
+    }
+    .bili-switch-global .slider .sun-glow {
+        left: 2px;
+        top: 2px;
+        width: 16px;
+        height: 16px;
+    }
+    .bili-switch-global .slider .moon {
+        right: 7px;
+        top: 8px;
+        width: 14px;
+        height: 14px;
+    }
+    .bili-switch-global .moon-part .star1 {
+        right: 3px; top: 3px; width: 7px; height: 7px;
+    }
+    .bili-switch-global .moon-part .star2 {
+        right: 12px; top: 17px; width: 5px; height: 5px;
+    }
+    .bili-switch-global .moon-part .star3 {
+        right: 4px; top: 22px; width: 4px; height: 4px;
+    }
+    .bili-switch-global input:checked + .slider:before {
+        transform: translateX(22px);
+    }
+    .bili-switch-global input:checked + .slider:after {
+        left: 24px;
+    }
+    #steps .data-row .data-card {
+        min-width: 120px;
+    }
+}
+@media (max-width: 900px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+        min-width: unset;
+        box-shadow: none;
+    }
+    .main-content {
+        padding: 10px;
+    }
+    #steps .data-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+.settings-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 54px;
+}
+/* 聊天内容美化（如原代码） */
+#settings-chat-dialog .chat-header {
+    background: linear-gradient(90deg, #6ec6ff 0%, #4e73df 100%);
+    color: #fff;
+    padding: 16px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.15rem;
+    border-bottom: 1px solid #e3e6f0;
+}
+#settings-chat-dialog .chat-header button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+#settings-chat-dialog .chat-body {
+    background: #f4f7fc;
+    padding: 16px;
+    min-height: 120px;
+    flex: 1 1 0;
+    max-height: 320px;
+    overflow-y: auto;
+    font-size: 1.05rem;
+}
+#settings-chat-dialog .chat-footer {
+    display: flex;
+    padding: 11px 16px 13px 16px;
+    border-top: 1px solid #e3e6f0;
+    background: #fff;
+}
+#settings-chat-dialog #settings-chat-input {
+    flex: 1 1 0;
+    border: 1px solid #d4d9e1;
+    border-radius: 9px;
+    padding: 8px 11px;
+    margin-right: 8px;
+    font-size: 1.05rem;
+    outline: none;
+}
+#settings-chat-dialog #settings-chat-send-btn {
+    background: linear-gradient(90deg, #4e73df 0%, #6ec6ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0 16px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+}
+#settings-chat-dialog #settings-chat-send-btn:hover {
+    background: linear-gradient(90deg, #6ec6ff 0%, #4e73df 100%);
+}
+
+#settings-chat-body, #chat-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* 新增确保一行一条消息 */
+    align-items: stretch;
+}
+.chat-message {
+    display: inline-block;
+    max-width: 70%;      /* 气泡最大宽度 */
+    min-width: 48px;
+    padding: 9px 15px;
+    border-radius: 14px;
+    margin: 4px 0;
+    font-size: 1rem;
+    word-break: break-word;
+    white-space: pre-line;
+    box-shadow: 0 1px 5px 0 rgba(44,120,255,0.07);
+    vertical-align: top;
+}
+
+.chat-message.user {
+    align-self: flex-end;             /* 气泡靠右 */
+    background: #d4f5ee;
+    color: #215c39;
+    text-align: left;
+}
+
+.chat-message.bot {
+    align-self: flex-start;           /* 气泡靠左 */
+    background: #eaf4ff;
+    color: #1c4375;
+    text-align: left;
+}
+.chat-message.user {
+    align-self: flex-end;
+    background: #d4f5ee;
+    color: #215c39;
+    text-align: right;
+}
+
+
+/* 夜间模式适配（可选） */
+body.night-mode #settings-chat-dialog {
+    background: #222b3a;
+    color: #eaeef4;
+}
+body.night-mode #settings-chat-dialog .chat-header {
+    background: linear-gradient(90deg, #3e62a9 0%, #2ca58d 100%);
+    color: #fff;
+}
+body.night-mode #settings-chat-dialog .chat-body {
+    background: #253048;
+    color: #eaeef4;
+}
+body.night-mode #settings-chat-dialog .chat-footer {
+    background: #222b3a;
+    border-top: 1px solid #394056;
+}
+body.night-mode #settings-chat-dialog #settings-chat-input {
+    background: #182034;
+    color: #eaeef4;
+    border-color: #394056;
+}
+
+
+.time-range-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    margin-left: 12px;
+}
+.time-field {
+    width: 98px;
+    min-width: 80px;
+    padding: 8px 10px;
+    font-size: 1.08rem;
+}
+.large-time-field {
+    width: 130px;
+    min-width: 120px;
+    font-size: 1.12rem;
+    padding: 10px 12px;
+}
+/* 美化type=time在夜间模式下的显示 */
+body.night-mode .time-field,
+body.night-mode .large-time-field {
+    background: #182034;
+    color: #eaeef4;
+    border-color: #394056;
+}
+
+
+#color-picker-btn {
+  width: 54px;
+  height: 54px;
+  background: linear-gradient(135deg, #fff, #80cddd);
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+#color-picker-btn:hover {
+   transform: scale(1.08);
+}
+#color-picker-btn i {
+  font-size: 1.6rem;
+  color: #333;
+  transition: transform 0.2s;
+}
+#theme-color-input {
+  position: absolute;
+  left: 0; top: 0;
+  width: 54px;
+  height: 54px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Nutrition Management Pie Chart Row */
+.nutrition-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.nutrition-new-btn {
+    margin-left: auto;
+    padding: 7px 18px;
+    font-size: 1.05rem;
+}
+.nutrition-pie-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 22px;
+    gap: 18px;
+}
+.nutrition-pie-chart-container {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+}
+.nutrition-pie-value {
+    position: absolute;
+    left: 0; right: 0; top: 58px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.16rem;
+    font-weight: bold;
+    color: #222;
+}
+.nutrition-pie-percent {
+    position: absolute;
+    left: 0; right: 0; top: 98px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.09rem;
+    color: #21a6b1;
+}
+.nutrition-date-row {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* Nutrition Management Meal Blocks */
+.nutrition-meals-row {
+    display: flex;
+    flex-direction: column;  /* 竖排 */
+    gap: 32px;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 32px;
+}
+.nutrition-meal-block {
+    min-width: 120px;
+    border-radius: 10px;
+    background: #f8f9fc;
+    padding: 17px 12px;
+    box-shadow: 0 0.03rem 0.45rem 0 rgba(58,59,69,0.08);
+    text-align: center;
+    position: relative;
+}
+.nutrition-meal-title {
+    font-weight: bold;
+    font-size: 1.13rem;
+    color: #222;
+    margin-bottom: 9px;
+}
+.nutrition-meal-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 链接居中 */
+}
+.nutrition-meal-link {
+    color: #4e73df;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1.01rem;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    margin: 0 auto 8px auto;
+    width: auto;
+}
+.nutrition-meal-link:last-child {
+    margin-bottom: 0;
+}
+/* Nutrition Intake Add 页面样式 */
+#nutrition-new {
+    min-height: 420px;
+}
+.nutrition-new-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+#nutrition-new, #photo-detail {
+    position: relative;
+}
+.nutrition-back-btn {
+    position: absolute;
+    top: 24px;
+    right: 48px;
+    padding: 7px 18px;
+    font-size: 1.05rem;
+    z-index: 100;
+}
+
+.nutrition-new-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+.nutrition-new-photo-preview {
+    width: 350px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #eaf4ff;
+    border: 1.5px dashed #4e73df;
+    position: relative;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+.nutrition-new-photo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down; /* 保持比例，不超过区域 */
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+}
+
+#nutritionNewPhotoText {
+    position: absolute;
+    left: 0; right: 0; top: 50%; transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #555;
+    font-size: 1.04rem;
+    font-weight: 500;
+}
+.nutrition-new-meal-select-row {
+    position: relative;
+    margin-bottom: 8px;
+}
+#nutritionMealTypeBtn {
+    min-width: 110px;
+    font-size: 1.03rem;
+}
+.nutrition-meal-type-dropdown {
+    display: none;
+    position: absolute;
+    left: 0; top: 38px;
+    background: #fff;
+    border: 1px solid #d4d9e1;
+    border-radius: 7px;
+    box-shadow: 0 1px 8px rgba(44,120,255,0.12);
+    z-index: 100;
+    min-width: 120px;
+}
+.nutrition-meal-type-dropdown {
+    display: none;
+    position: absolute;
+    left: 110px; /* 向右展开，紧贴按钮 */
+    top: 0;
+    background: #fff;
+    border: 1px solid #d4d9e1;
+    border-radius: 7px;
+    box-shadow: 0 1px 8px rgba(44,120,255,0.12);
+    z-index: 100;
+    min-width: 120px;
+    flex-direction: row; /* 横向排列 */
+    flex-wrap: nowrap;
+}
+
+.nutrition-meal-type-dropdown.active {
+    display: flex !important;
+}
+
+.nutrition-meal-type-dropdown div {
+    padding: 10px 18px;
+    cursor: pointer;
+    font-size: 1.02rem;
+    transition: background 0.18s;
+    border-right: 1px solid #eee;
+}
+.nutrition-meal-type-dropdown div:last-child {
+    border-right: none;
+}
+.nutrition-meal-type-dropdown div:hover {
+    background: #eaf4ff;
+}
+.nutrition-new-btn-row {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+.nutrition-new-status-row {
+    min-height: 28px;
+    font-size: 1.04rem;
+    text-align: center;
+    margin-top: 12px;
+}
+.center-form-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.center-form-card .data-label {
+    text-align: center;
+}
+.center-form-card .input-field {
+    margin-left: 0;
+    margin-right: 0;
+    width: 70%;
+    max-width: 210px;
+}
+.center-form-card .action-btn {
+    margin-top: 10px;
+    width: 100px;
+    justify-content: center;
+}
+/* Nutrition Management Check按钮（更窄高度，蓝色正常） */
+.nutrition-check-btn {
+    height: 32px;
+    min-height: 32px;
+    padding: 0 15px;
+    font-size: 0.97rem;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    margin-left: 7px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: background 0.18s;
+}
+.nutrition-check-btn:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
+/* 避免Check按钮内容显示异常 */
+.nutrition-check-btn i {
+    font-size: 1.0em;
+    margin-right: 3px;
+}
+
+/* 保证nutrition-date-row的按钮高度一致 */
+.nutrition-date-row .action-btn,
+.nutrition-date-row .nutrition-check-btn {
+    height: 32px;
+    min-height: 32px;
+    font-size: 0.97rem;
+    padding: 0 15px;
+}
+
+/* 新增：运动模式界面样式 */
+.start-workout-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.start-workout-container .start-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+#start-workout-btn {
+    width: 150px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    height: 50px;
+}
+#status-display-section {
+    display: none; /* 默认隐藏 */
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+#status-display-section.active {
+    display: flex;
+}
+.realtime-data-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.data-card-small {
+    padding: 15px;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--background-card);
+    box-shadow: 0 0.1rem 1.2rem 0 rgba(58, 59, 69, 0.08);
+}
+.data-card-small .data-value {
+    font-size: 1.6rem;
+}
+#stop-workout-btn {
+    width: 150px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    height: 50px;
+}
+#running-map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+#running-map {
+    width: 100%;
+    height: 100%;
+}
+/* 新增：运动记录界面样式 */
+.filter-section {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.workout-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.workout-table thead tr {
+    background-color: var(--primary-color);
+    color: white;
+}
+.workout-table th, .workout-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.workout-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.workout-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+body.night-mode .workout-table tbody tr:nth-of-type(even) {
+    background-color: #27324a;
+}
+body.night-mode .workout-table tbody tr:hover {
+    background-color: #2c374b;
+}
+.history-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+/* 弹窗背景 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 固定在视窗中 */
+    z-index: 1000; /* 确保在其他内容之上 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    justify-content: center;
+    align-items: center;
+}
+
+/* 弹窗内容 */
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-title {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.exercise-options {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.exercise-options label {
+    margin-left: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.exercise-options input[type="radio"] {
+    transform: scale(1.3);
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.modal-buttons .action-btn {
+    min-width: 120px;
+}
+
+
+/* nutrition-mass-popup 样式 */
+.nutrition-mass-popup {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.22);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+.nutrition-mass-popup .popup-content {
+    background: #fff;
+    border-radius: 16px;
+    max-width: 380px;
+    width: 95vw;
+    padding: 28px 28px 22px 28px;
+    box-shadow: 0 10px 32px rgba(44,120,255,0.14);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.nutrition-mass-popup .step-label {
+    margin-bottom: 6px;
+    font-size: 1.04em;
+    color: #4e73df;
+}
+.nutrition-mass-popup .measure-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 5px;
+}
+.nutrition-mass-popup .popup-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
+    margin-top: 22px;
+}
+.nutrition-mass-popup .popup-btn {
+    background: #21a6b1;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 6px 19px;
+    font-size: 1.06em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nutrition-mass-popup .popup-btn.cancel {
+    background: #888;
+}
+.nutrition-mass-popup .popup-btn.confirm {
+    background: #4e73df;
+}
+.nutrition-mass-popup .popup-value {
+    font-weight: bold;
+    margin-left: 8px;
+    color: #333;
+}
+.nutrition-mass-popup .popup-msg {
+    color: #21a6b1;
+    font-size: 1.02em;
+    margin-top: 7px;
+    min-height: 22px;
+}
+.nutrition-new-btn-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 8px;
+}
+.action-btn:disabled,
+.action-btn[disabled] {
+    background: #bbb !important;
+    color: #fff !important;
+    cursor: not-allowed !important;
+    opacity: 0.7;
+}
+
+.diet-row-flex {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.date-picker-card {
+  box-shadow: 0 2px 8px rgba(44,120,255,0.07);
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 0;
+}
+
+#diet-date-picker.input-field {
+  width: 120px;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 7px;
+  border: 1px solid #e3e6f0;
+  margin: 0 5px;
+  background: #f8fafc;
+}
+
+.data-card.center-form-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(44,120,255,0.07);
+}
+
+.data-card {
+  box-shadow: 0 4px 12px rgba(44,120,255,0.07);
+  border-radius: 10px;
+  background: #fff;
+  padding: 18px 14px;
+}
+
+.data-value {
+  font-weight: bold;
+  color: #4e73df;
+}
+
+.suggestion {
+  margin-top: 7px;
+  background: rgba(44,120,255,0.05);
+  border-radius: 12px;
+  padding: 18px 12px;
+  font-size: 1.15em;
+  color: #21a96b;
+}
+
+.nutrition-date-row .action-btn,
+.nutrition-date-row .history-btn,
+.nutrition-date-row .input-field {
+    height: 32px;
+    min-height: 32px;
+    font-size: 0.97rem;
+    padding: 0 15px;
+}
+.nutrition-date-row .input-field {
+    width: 120px;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 7px;
+    border: 1px solid #e3e6f0;
+    margin: 0 5px;
+    padding: 5px 8px;
+    background: #fff;
+}
+/* 添加hydration相关样式 */
+.hydration-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hydration-date-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.hydration-date-input {
+    width: 150px;
+    text-align: center;
+    height: 36px;
+    margin: 0;
+}
+
+.hydration-check-btn {
+    height: 36px;
+    padding: 0 15px;
+    font-size: 0.95rem;
+}
+
+.hydration-data-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.hydration-intake-card,
+.hydration-target-card {
+    flex: 1;
+    max-width: 200px;
+    padding: 15px;
+    text-align: center;
+}
+
+.hydration-target-input {
+    width: 80%;
+    margin: 8px auto;
+    height: 36px;
+}
+
+.hydration-set-btn {
+    height: 36px;
+    padding: 0 15px;
+    font-size: 0.95rem;
+    margin-top: 8px;
+}
+
+.hydration-suggestion-row {
+    text-align: center;
+    padding: 15px;
+    background: rgba(44,120,255,0.05);
+    border-radius: 10px;
+}
+
+.hydration-suggestion-row .data-label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    .hydration-data-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hydration-intake-card,
+    .hydration-target-card {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.hydration-single-center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0 !important;
+}
+
+
+/* Home Section 样式增强 */
+.home-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 38px auto 0 auto;
+    max-width: 900px;
+}
+.home-row {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+}
+.home-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 18px rgba(44,120,255,0.07);
+    flex: 1 1 0;
+    min-width: 140px;
+    max-width: 260px;
+    padding: 28px 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.home-card-icon {
+    font-size: 2.4em;
+    color: var(--primary-color);
+    margin-bottom: 13px;
+}
+.home-card-label {
+    font-size: 1.13em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.home-card-value {
+    font-size: 2.00em;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+.home-card.home-sedentary {
+    background: #fff9ef;
+    border: 1.5px solid #fdab4a;
+}
+.home-card-tip {
+    font-size: 0.98em;
+    color: #e67e22;
+    margin-top: 8px;
+}
+.home-dashcard {
+    background: #eef3fe;
+    border-radius: 14px;
+    box-shadow: 0 2px 18px rgba(44,120,255,0.05);
+    display: flex;
+    flex: 2 2 0;
+    min-width: 320px;
+    max-width: 480px;
+    padding: 18px 14px;
+    gap: 0;
+}
+.home-dashcard-block {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #d3e4ff;
+    padding: 0 10px;
+    min-width: 120px;
+}
+.home-dashcard-block:last-child {
+    border-right: none;
+}
+.home-dashcard-icon {
+    font-size: 1.6em;
+    color: #21a6b1;
+    margin-bottom: 7px;
+}
+.home-dashcard-label {
+    font-size: 1.07em;
+    color: #444;
+    margin-bottom: 4px;
+}
+.home-dashcard-value {
+    font-size: 1.28em;
+    font-weight: bold;
+    color: #4e73df;
+    margin-bottom: 3px;
+}
+.sedentary-circle {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 10px auto;
+}
+.sedentary-dots {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+}
+.sedentary-dot {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #eee;
+  transition: background 0.3s;
+}
+.sedentary-dot.active {
+  background: #ff82a0; /* 粉色 */
+}
+.sedentary-dot.inactive {
+  background: #ddd;    /* 灰色 */
+}
+.sedentary-center-num {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #e74a3b; /* 可用js动态修改颜色 */
+  pointer-events: none;
+  z-index: 10;
+  width: 46px; /* 可选，让数字居中更好 */
+  text-align: center;
+  background: transparent;
+}
+.home-card.home-sedentary.sedentary-red {
+  border: 2px solid #e74a3b;
+  background: #fff0f3;
+}
+.home-card.home-sedentary.sedentary-yellow {
+  border: 2px solid #f6c23e;
+  background: #fffbea;
+}
+.home-card.home-sedentary.sedentary-green {
+  border: 2px solid #1cc88a;
+  background: #eafff2;
+}
+
+/* Home卡片主背景和边框 */
+body.night-mode .home-card {
+    background: #232b3b;
+    border: 1.5px solid #394056;
+    color: #eaeef4;
+    box-shadow: 0 2px 18px rgba(44,120,255,0.05);
+}
+
+body.night-mode .home-card.home-sedentary {
+    background: #2c374b;
+    border: 1.5px solid #394056;
+}
+
+/* dashcard夜间 */
+body.night-mode .home-dashcard {
+    background: #202a3c;
+    box-shadow: 0 2px 16px rgba(44,120,255,0.05);
+}
+
+body.night-mode .home-dashcard-block {
+    border-right: 1px solid #394056;
+}
+body.night-mode .home-dashcard-block:last-child {
+    border-right: none;
+}
+
+/* home卡片类文字 */
+body.night-mode .home-card-label,
+body.night-mode .home-dashcard-label {
+    color: #eaeef4;
+}
+
+body.night-mode .home-card-value,
+body.night-mode .home-dashcard-value {
+    color: #6ec6ff;
+}
+
+/* 图标夜间更亮一点蓝色或绿色 */
+body.night-mode .home-card-icon {
+    color: #6ec6ff;
+}
+body.night-mode .home-dashcard-icon {
+    color: #2ca58d;
+}
+
+/* 久坐提醒夜间不同状态的背景和边框 */
+body.night-mode .home-card.home-sedentary.sedentary-red {
+    border: 2px solid #e74a3b;
+    background: #3b232b;
+}
+body.night-mode .home-card.home-sedentary.sedentary-yellow {
+    border: 2px solid #f6c23e;
+    background: #3b3923;
+}
+body.night-mode .home-card.home-sedentary.sedentary-green {
+    border: 2px solid #1cc88a;
+    background: #233b2c;
+}
+
+/* 久坐圆圈与点夜间模式 */
+body.night-mode .sedentary-circle {
+    background: #202a3c;
+}
+body.night-mode .sedentary-dot.active {
+    background: #ffb6d3;
+    box-shadow: 0 0 5px #ff82a0bb;
+}
+body.night-mode .sedentary-dot.inactive {
+    background: #394056;
+}
+
+body.night-mode .sedentary-center-num {
+    color: #6ec6ff;
+    text-shadow: 0 2px 8px #6ec6ff33;
+}
+
+/* 提示语夜间柔和色彩 */
+body.night-mode .home-card-tip {
+    color: #f6c23e;
+    background: #232b3b;
+    border-radius: 5px;
+    padding: 4px 8px;
+    box-shadow: 0 2px 8px #232b3b22;
+}
+
+/* Home整体行与主容器夜间更协调 */
+body.night-mode .home-row {
+    gap: 32px;
+}
+
+body.night-mode .home-dashboard {
+    background: #1a2230;
+    border-radius: 18px;
+    box-shadow: 0 1px 24px #232b3b33;
+    padding-bottom: 18px;
+}
+
+/* 让边框和阴影柔和些，不那么突兀 */
+body.night-mode .data-card,
+body.night-mode .data-card-small {
+    background: #232b3b !important;
+    color: #eaeef4 !important;
+    box-shadow: 0 2px 12px #232b3b22;
+    border: 1.2px solid #394056;
+}
+
+#home-calorie-consumed,
+#home-calorie-burned {
+    margin-top: 10px; /* 你可以根据视觉效果调整数值 */
+    display: block;   /* 确保margin-top生效 */
+}
+
+.gender-circle {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2.5px solid #4e73df;
+    background: #fff;
+    transition: background 0.2s, border-color 0.2s;
+    margin-right: 4px;
+}
+.gender-circle.selected {
+    background: #4e73df;
+    border-color: #4e73df;
+}
+.gender-row:hover .gender-circle {
+    border-color: #1cc88a;
+}
+
+@media (max-width: 900px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        box-shadow: none;
+        padding: 8px 0;
+    }
+    .main-content {
+        padding: 8px;
+    }
+    .home-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        padding: 3px 0;
+        font-size: 0.97em;
+    }
+    .main-content {
+        padding: 4px;
+    }
+    .home-row,
+    .nutrition-meals-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .home-card,
+    .home-dashcard,
+    .data-card,
+    .nutrition-meal-block {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        padding: 8px 4px;
+    }
+    .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 8px;
+        padding-bottom: 4px;
+    }
+    .date-display {
+        font-size: 0.96em;
+        padding: 3px 5px;
+    }
+    .action-btn, .input-field {
+        font-size: 0.96em;
+        height: 30px;
+        padding: 0 8px;
+    }
+    .input-field, input[type="date"], input[type="time"] {
+        width: 100%;
+        min-width: 0;
+    }
+    .workout-table, .workout-table thead, .workout-table tbody, .workout-table th, .workout-table td, .workout-table tr {
+        display: block;
+        width: 100%;
+    }
+    #routine-map-container, #routine-map,
+    #running-map-container, #running-map {
+        min-height: 160px;
+        height: 160px;
+        width: 100%;
+    }
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e3e6f0;
+    background: var(--background-header);
+    transition: background 0.3s;
+    border-radius: 18px;   /* 新增，让其变圆角 */
+}

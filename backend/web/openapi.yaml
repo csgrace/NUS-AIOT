@@ -1,0 +1,657 @@
+swagger: '2.0'
+info:
+  title: Smart Health Management API
+  description: API for managing smart health data including steps, heart rate, hydration, and nutrition.
+  version: 1.0.0
+host: 192.168.137.85:5000 # Replace with your Raspberry Pi's actual IP and port
+basePath: /
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+  /:
+    get:
+      summary: Render Home Page
+      description: Renders the index.html file for the main application interface.
+      responses:
+        200:
+          description: HTML content of the home page.
+
+  /getSteps:
+    get:
+      summary: Get Latest Steps Data
+      description: Retrieves the latest recorded step count, distance, and pace.
+      tags:
+        - Exercise Tracking
+      responses:
+        200:
+          description: Successful response with steps data.
+          schema:
+            type: object
+            properties:
+              steps:
+                type: integer
+                description: Current step count.
+                example: 7500
+              distance:
+                type: number
+                format: float
+                description: Distance covered in kilometers.
+                example: 5.2
+              pace:
+                type: number
+                format: float
+                description: Average pace (e.g., minutes per kilometer).
+                example: 8.3
+        500:
+          description: Internal server error.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  /setStepTarget:
+    post:
+      summary: Set Daily Step Target
+      description: Sets the user's daily step target.
+      tags:
+        - Exercise Tracking
+      parameters:
+        - in: body
+          name: body
+          description: Step target to set.
+          required: true
+          schema:
+            type: object
+            required:
+              - target
+            properties:
+              target:
+                type: integer
+                description: The daily step target.
+                example: 10000
+      responses:
+        200:
+          description: Step target set successfully.
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+        400:
+          description: Invalid input.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        500:
+          description: Internal server error.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  /getHeartRate:
+    get:
+      summary: Get Latest Heart Rate
+      description: Retrieves the most recent heart rate reading and its abnormality status.
+      tags:
+        - Heart Rate Monitor
+      parameters:
+        - name: time
+          in: query
+          type: string
+          format: date-time
+          required: false
+          description: Optional timestamp to query heart rate around that time (ISO 8601).
+      responses:
+        200:
+          description: Successful response with heart rate data.
+          schema:
+            type: object
+            properties:
+              value:
+                type: integer
+                description: Current heart rate in beats per minute (bpm).
+                example: 75
+              abnormal:
+                type: boolean
+                description: True if heart rate is abnormal (e.g., too high/low), False otherwise.
+                example: false
+        500:
+          description: Internal server error.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  /getHeartRateTimeSlot:
+    get:
+      summary: Get Heart Rate History by Time Slot
+      description: Retrieves heart rate records within a specified start and end timestamp.
+      tags:
+        - Heart Rate Monitor
+      parameters:
+        - name: start
+          in: query
+          type: string
+          format: date-time
+          required: true
+          description: Start timestamp of the time slot (ISO 8601 format, e.g., 2023-10-27T00:00:00Z).
+        - name: end
+          in: query
+          type: string
+          format: date-time
+          required: true
+          description: End timestamp of the time slot (ISO 8601 format, e.g., 2023-10-27T23:59:59Z).
+      responses:
+        200:
+          description: A list of heart rate records for the specified period.
+          schema:
+            type: object
+            properties:
+              records:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    time:
+                      type: string
+                      format: date-time
+                      example: 2023-10-27T10:30:00Z
+                    value:
+                      type: integer
+                      example: 78
+                    abnormal:
+                      type: boolean
+                      example: false
+        400:
+          description: Invalid date format or missing parameters.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        500:
+          description: Internal server error.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  /getWaterAmount:
+    get:
+      summary: Get Daily Water Intake
+      description: Retrieves the total water intake recorded for the current day.
+      tags:
+        - Hydration
+      responses:
+        200:
+          description: Successful response with total water intake.
+          schema:
+            type: object
+            properties:
+              amount:
+                type: integer
+                description: Total water intake in milliliters (ml).
+                example: 1800
+        500:
+          description: Internal server error.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  /setWaterAmountTarget:
+    post:
+      summary: Set Daily Water Intake Target
+      description: Sets the user's daily water intake target in milliliters.
+      tags:
+        - Hydration
+      parameters:
+        - in: body
+          name: body
+          description: Water target to set.
+          required: true
+          schema:
+            type: object
+            required:
+              - target
+            properties:
+              target:
+                type: integer
+                description: The daily water intake target in ml.
+                example: 2500
+      responses:
+        200:
+          description: Water target set successfully.
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+        400:
+          description: Invalid input.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        500:
+          description: Internal server error.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  /updateFoodPhoto:
+    post:
+      summary: 上传图片
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                photo:
+                  type: string
+                  description: 图片的 dataurl base64
+                mealType:
+                  type: string
+                  description: 餐段
+                photoDate:
+                  type: string
+                  description: 照片对应的日期(YYYY-MM-DD)
+      responses:
+        '200':
+          description: 上传成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  msg:
+                    type: string
+                  file_path:
+                    type: string
+                  photo_id:
+                    type: integer
+        '400':
+          description: 错误
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  msg:
+                    type: string
+
+  /updateFood:
+    post:
+      summary: Update Food Information or Record Intake
+      description: Processes food information, either by simulating AI recognition or recording confirmed intake.
+      tags:
+        - Nutrition & Diet
+      parameters:
+        - in: body
+          name: body
+          description: Food details and action.
+          required: true
+          schema:
+            type: object
+            required:
+              - photoId
+            properties:
+              photoId:
+                type: string
+                description: ID of the uploaded photo.
+                example: photo_20231027153045123
+              calories:
+                type: number
+                format: float
+                description: Estimated or confirmed calories for the food. Required if `sync` is true.
+                example: 350.5
+              desc:
+                type: string
+                description: Description of the food. Required if `sync` is true.
+                example: "A bowl of noodles with vegetables"
+              sync:
+                type: boolean
+                description: Set to `true` to record the food as consumed; `false` or omit for recognition only.
+                example: false
+      responses:
+        200:
+          description: Food information updated or intake recorded successfully.
+          schema:
+            type: object
+            properties:
+              calories:
+                type: number
+                format: float
+                description: Estimated calories (returned if `sync` is false).
+              desc:
+                type: string
+                description: Recognized food description (returned if `sync` is false).
+              message:
+                type: string
+        400:
+          description: Invalid input or missing required fields for intake.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        500:
+          description: Internal server error.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  /getFoodAdvice:
+    get:
+      summary: Get Daily Diet Advice
+      description: Provides diet suggestions based on recorded calorie intake and burned calories for a specific date.
+      tags:
+        - Nutrition & Diet
+      parameters:
+        - name: date
+          in: query
+          type: string
+          format: date
+          required: true
+          description: Date for which to get diet advice (YYYY-MM-DD format, e.g., 2023-10-27).
+      responses:
+        200:
+          description: Successful response with diet advice.
+          schema:
+            type: object
+            properties:
+              advice:
+                type: string
+                description: Diet suggestion for the given date.
+                example: "Eat a balanced diet of protein, vegetables, fruit, and whole grains."
+        400:
+          description: Invalid date format.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        500:
+          description: Internal server error.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  /getCaloriesUsedToday:
+    get:
+      summary: Get Calories Burned for a Date
+      description: Retrieves the total calories burned (used) for a specific date.
+      tags:
+        - Nutrition & Diet
+      parameters:
+        - name: date
+          in: query
+          type: string
+          format: date
+          required: true
+          description: Date for which to get calories burned (YYYY-MM-DD format, e.g., 2023-10-27).
+      responses:
+        200:
+          description: Successful response with total calories burned.
+          schema:
+            type: object
+            properties:
+              calories:
+                type: number
+                format: float
+                description: Total calories burned in kcal.
+                example: 450.5
+        400:
+          description: Invalid date format.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        500:
+          description: Internal server error.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  /getCaloriesGainedToday:
+    get:
+      summary: Get Calories Consumed for a Date
+      description: Retrieves the total calories consumed (gained) for a specific date.
+      tags:
+        - Nutrition & Diet
+      parameters:
+        - name: date
+          in: query
+          type: string
+          format: date
+          required: true
+          description: Date for which to get calories consumed (YYYY-MM-DD format, e.g., 2023-10-27).
+      responses:
+        200:
+          description: Successful response with total calories consumed.
+          schema:
+            type: object
+            properties:
+              calories:
+                type: number
+                format: float
+                description: Total calories consumed in kcal.
+                example: 1200.0
+        400:
+          description: Invalid date format.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        500:
+          description: Internal server error.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  /setCaloriesTarget:
+    post:
+      summary: Set Daily Calorie Target
+      description: Sets the user's daily calorie intake target.
+      tags:
+        - Nutrition & Diet
+      parameters:
+        - in: body
+          name: body
+          description: Calorie target to set.
+          required: true
+          schema:
+            type: object
+            required:
+              - target
+            properties:
+              target:
+                type: integer
+                description: The daily calorie target in kcal.
+                example: 2000
+      responses:
+        200:
+          description: Calorie target set successfully.
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+        400:
+          description: Invalid input.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        500:
+          description: Internal server error.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  /getRoutine:
+    get:
+      summary: Get Routine Path
+      description: Retrieves GPS coordinates representing the user's routine path within a specified time slot.
+      tags:
+        - Exercise Tracking
+      parameters:
+        - name: start
+          in: query
+          type: string
+          format: date-time
+          required: true
+          description: Start timestamp of the time slot (ISO 8601 format, e.g., 2023-10-27T08:00:00Z).
+        - name: end
+          in: query
+          type: string
+          format: date-time
+          required: true
+          description: End timestamp of the time slot (ISO 8601 format, e.g., 2023-10-27T09:00:00Z).
+      responses:
+        200:
+          description: A list of latitude/longitude coordinates and timestamps forming the routine path.
+          schema:
+            type: object
+            properties:
+              route:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    lat:
+                      type: number
+                      format: float
+                      description: Latitude.
+                      example: 31.2304
+                    lng:
+                      type: number
+                      format: float
+                      description: Longitude.
+                      example: 121.4737
+                    time:
+                      type: string
+                      format: date-time
+                      description: Timestamp of the coordinate.
+                      example: 2023-10-27T08:05:30Z
+        400:
+          description: Invalid date format or missing parameters.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+        500:
+          description: Internal server error.
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  /getFoodPhotos:
+    get:
+      summary: Get All Food Photos
+      description: Returns all uploaded food photos with id, file_path, and description.
+      tags:
+        - Nutrition & Diet
+      responses:
+        200:
+          description: Successful response with photo list.
+          schema:
+            type: object
+          properties:
+            id:
+              type: integer
+            file_path:
+              type: string
+            filename:
+              type: string
+            description:
+              type: string
+            photo_date:
+              type: string
+              description: 照片对应的日期(YYYY-MM-DD)
+
+  /food_photo_image/{photo_id}:
+    get:
+      summary: Get Food Photo Image
+      description: Returns the actual image file for a food photo, given its photo_id.
+      parameters:
+        - name: photo_id
+          in: path
+          required: true
+          type: integer
+          description: ID of the food photo.
+      responses:
+        200:
+          description: Image file returned.
+          schema:
+            type: string
+            format: binary
+        404:
+          description: Photo not found.
+          schema:
+            type: string
+
+  /getFoodPhotoDetail:
+    get:
+      summary: Get Food Photo Detail
+      description: Get detailed info for a food photo, including nutrition fields.
+      parameters:
+        - name: photo_id
+          in: query
+          required: true
+          type: integer
+          description: ID of the food photo.
+      responses:
+        200:
+          description: Photo detail
+          schema:
+            type: object
+            properties:
+              file_path:
+                type: string
+              food_name:
+                type: string
+              calorie:
+                type: string
+              protein:
+                type: string
+              fat:
+                type: string
+              carbohydrate:
+                type: string
+              fiber:
+                type: string

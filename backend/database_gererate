@@ -1,0 +1,245 @@
+create table public.band_acceleration
+(
+    time timestamp        not null
+        primary key,
+    x    double precision not null,
+    y    double precision not null,
+    z    double precision not null
+);
+
+alter table public.band_acceleration
+    owner to group4;
+
+create table public.band_accel_1step_per_2second
+(
+    time timestamp,
+    x    double precision,
+    y    double precision,
+    z    double precision
+);
+
+alter table public.band_accel_1step_per_2second
+    owner to group4;
+
+create table public.band_accel_1p5_step_per_2second
+(
+    time timestamp,
+    x    double precision,
+    y    double precision,
+    z    double precision
+);
+
+alter table public.band_accel_1p5_step_per_2second
+    owner to group4;
+
+create table public.band_accel_2_step_per_2second
+(
+    time timestamp,
+    x    double precision,
+    y    double precision,
+    z    double precision
+);
+
+alter table public.band_accel_2_step_per_2second
+    owner to group4;
+
+create table public.band_accel_3_step_per_2second
+(
+    time timestamp,
+    x    double precision,
+    y    double precision,
+    z    double precision
+);
+
+alter table public.band_accel_3_step_per_2second
+    owner to group4;
+
+create table public.band_accel_4_step_per_2second
+(
+    time timestamp,
+    x    double precision,
+    y    double precision,
+    z    double precision
+);
+
+alter table public.band_accel_4_step_per_2second
+    owner to group4;
+
+create table public.band_accel_stable
+(
+    time timestamp,
+    x    double precision,
+    y    double precision,
+    z    double precision
+);
+
+alter table public.band_accel_stable
+    owner to group4;
+
+create table public.band_accel_5_step_per_2second
+(
+    time timestamp,
+    x    double precision,
+    y    double precision,
+    z    double precision
+);
+
+alter table public.band_accel_5_step_per_2second
+    owner to group4;
+
+create table public.band_accel_6_step_per_2second
+(
+    time timestamp,
+    x    double precision,
+    y    double precision,
+    z    double precision
+);
+
+alter table public.band_accel_6_step_per_2second
+    owner to group4;
+
+create table public.band_steps
+(
+    time           timestamp not null,
+    step_count     integer   not null,
+    step_frequency integer
+);
+
+alter table public.band_steps
+    owner to group4;
+
+create table public.band_accel_stable_stand
+(
+    time timestamp,
+    x    double precision,
+    y    double precision,
+    z    double precision
+);
+
+alter table public.band_accel_stable_stand
+    owner to group4;
+
+create table public.band_accel_stable_tilt
+(
+    time timestamp,
+    x    double precision,
+    y    double precision,
+    z    double precision
+);
+
+alter table public.band_accel_stable_tilt
+    owner to group4;
+
+create table public.user_settings
+(
+    setting_name  varchar(50) not null
+        primary key,
+    setting_value text,
+    last_updated  timestamp default CURRENT_TIMESTAMP
+);
+
+alter table public.user_settings
+    owner to group4;
+
+create table public.daily_activity_summary
+(
+    activity_date   date not null
+        primary key,
+    calories_burned numeric
+);
+
+alter table public.daily_activity_summary
+    owner to group4;
+
+create table public.food_photos
+(
+    id           serial
+        primary key,
+    file_path    text not null,
+    upload_time  timestamp default CURRENT_TIMESTAMP,
+    food_name    varchar(128),
+    calorie      double precision,
+    protein      varchar(128),
+    fat          varchar(128),
+    carbohydrate varchar(128),
+    fiber        varchar(128),
+    description  text,
+    photo_date   date,
+    weight       double precision
+);
+
+alter table public.food_photos
+    owner to group4;
+
+create table public.workout_records
+(
+    id                    serial
+        primary key,
+    exercise_type         varchar(50) not null,
+    start_time            timestamp,
+    end_time              timestamp,
+    total_calories_burned double precision,
+    pushup_count          integer,
+    squat_count           integer,
+    running_distance_km   double precision,
+    abnormal_heart_rate   boolean,
+    abnormal_hr_times     text
+);
+
+alter table public.workout_records
+    owner to group4;
+
+create table public.scale_weight
+(
+    time   timestamp not null
+        primary key,
+    weight integer,
+    mode   varchar(8)
+);
+
+alter table public.scale_weight
+    owner to group4;
+
+create table public.band_heart_rate
+(
+    id                   serial
+        primary key,
+    time                 timestamp not null,
+    heart_rate           integer   not null,
+    predicted_heart_rate integer
+);
+
+alter table public.band_heart_rate
+    owner to group4;
+
+create table public.water_drink
+(
+    time   timestamp not null
+        primary key,
+    amount integer
+);
+
+alter table public.water_drink
+    owner to group4;
+
+create table public.gps_data
+(
+    time      timestamp not null
+        primary key,
+    longitude double precision,
+    latitude  double precision,
+    speed     double precision
+);
+
+alter table public.gps_data
+    owner to group4;
+
+create table public.band_position
+(
+    time     timestamp,
+    position varchar
+);
+
+alter table public.band_position
+    owner to group4;
+

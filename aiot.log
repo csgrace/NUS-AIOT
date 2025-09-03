@@ -1,0 +1,1023 @@
+2025-07-15 11:06:14,480 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 11:06:14,482 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 11:06:14,512 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 11:06:14,513 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 11:06:15,980 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 11:06:15,980 - aiot - INFO - 启动GPS控制器
+2025-07-15 11:06:15,980 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 11:06:16,033 - aiot - INFO - 成功连接到GPS设备并启用通知
+2025-07-15 11:06:17,033 - aiot - ERROR - 发送命令失败: Expected a length-1 bytes but found 6 bytes
+2025-07-15 11:06:17,034 - aiot - INFO - GPS控制器已启动，开始接收数据
+2025-07-15 11:06:17,034 - aiot - INFO - GPS设备自动重连检测线程已启动
+2025-07-15 11:06:17,091 - aiot - ERROR - 数据处理错误: 'dbus.String' object has no attribute 'decode'
+2025-07-15 11:06:17,768 - aiot - ERROR - 数据处理错误: 'dbus.String' object has no attribute 'decode'
+2025-07-15 11:06:19,792 - aiot - ERROR - 数据处理错误: 'dbus.String' object has no attribute 'decode'
+2025-07-15 11:06:21,821 - aiot - ERROR - 数据处理错误: 'dbus.String' object has no attribute 'decode'
+2025-07-15 11:06:23,843 - aiot - ERROR - 数据处理错误: 'dbus.String' object has no attribute 'decode'
+2025-07-15 11:06:25,867 - aiot - ERROR - 数据处理错误: 'dbus.String' object has no attribute 'decode'
+2025-07-15 11:06:26,668 - aiot - INFO - 已断开与GPS设备的连接
+2025-07-15 11:06:26,672 - aiot - INFO - GPS控制器已停止
+2025-07-15 11:08:46,934 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 11:08:46,935 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 11:08:46,967 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 11:08:46,968 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 11:08:48,047 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 11:08:48,047 - aiot - INFO - 启动GPS控制器
+2025-07-15 11:08:48,047 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 11:08:48,083 - aiot - INFO - 成功连接到GPS设备并启用通知
+2025-07-15 11:08:49,083 - aiot - ERROR - 发送命令失败: Expected a length-1 bytes but found 6 bytes
+2025-07-15 11:08:49,084 - aiot - INFO - GPS控制器已启动，开始接收数据
+2025-07-15 11:08:49,084 - aiot - INFO - GPS设备自动重连检测线程已启动
+2025-07-15 11:08:49,156 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:08:49,757 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:08:51,782 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:08:53,807 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:08:55,832 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:08:57,857 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:08:59,882 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:01,907 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:03,932 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:05,957 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:07,982 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:10,007 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:12,032 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:14,057 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:16,082 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:18,107 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:20,132 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:22,157 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:24,182 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:26,207 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:28,240 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:30,258 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:32,320 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:34,345 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:36,370 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:38,395 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:40,420 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:42,445 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:44,470 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:09:44,840 - aiot - INFO - 已断开与GPS设备的连接
+2025-07-15 11:09:44,841 - aiot - INFO - GPS控制器已停止
+2025-07-15 11:09:48,194 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 11:09:48,195 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 11:09:48,225 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 11:09:48,226 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 11:09:49,309 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 11:09:49,309 - aiot - INFO - 启动GPS控制器
+2025-07-15 11:09:49,309 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 11:09:49,346 - aiot - INFO - 成功连接到GPS设备并启用通知
+2025-07-15 11:09:50,347 - aiot - ERROR - 发送命令失败: Expected a length-1 bytes but found 6 bytes
+2025-07-15 11:09:50,347 - aiot - INFO - GPS控制器已启动，开始接收数据
+2025-07-15 11:09:50,348 - aiot - INFO - GPS设备自动重连检测线程已启动
+2025-07-15 11:10:23,654 - aiot - INFO - 已断开与GPS设备的连接
+2025-07-15 11:10:23,654 - aiot - INFO - GPS控制器已停止
+2025-07-15 11:10:27,519 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 11:10:27,520 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 11:10:27,551 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 11:10:27,552 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 11:10:28,639 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 11:10:28,639 - aiot - INFO - 启动GPS控制器
+2025-07-15 11:10:28,639 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 11:10:28,675 - aiot - INFO - 成功连接到GPS设备并启用通知
+2025-07-15 11:10:29,807 - aiot - DEBUG - 发送命令: STATUS
+2025-07-15 11:10:29,807 - aiot - INFO - GPS控制器已启动，开始接收数据
+2025-07-15 11:10:29,808 - aiot - INFO - GPS设备自动重连检测线程已启动
+2025-07-15 11:12:23,154 - aiot - INFO - 已断开与GPS设备的连接
+2025-07-15 11:12:23,155 - aiot - INFO - GPS控制器已停止
+2025-07-15 11:12:27,326 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 11:12:27,327 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 11:12:27,358 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 11:12:27,359 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 11:12:28,440 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 11:12:28,440 - aiot - INFO - 启动GPS控制器
+2025-07-15 11:12:28,441 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 11:12:28,476 - aiot - INFO - 成功连接到GPS设备并启用通知
+2025-07-15 11:12:29,621 - aiot - DEBUG - 发送命令: STATUS
+2025-07-15 11:12:29,621 - aiot - INFO - GPS控制器已启动，开始接收数据
+2025-07-15 11:12:29,621 - aiot - INFO - GPS设备自动重连检测线程已启动
+2025-07-15 11:12:29,623 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:29,623 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:30,710 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:32,735 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:34,760 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:36,785 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:38,810 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:40,835 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:42,860 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:44,885 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:46,910 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:48,935 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:50,960 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:53,023 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:55,010 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:57,035 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:12:59,060 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:01,085 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:03,148 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:05,173 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:07,198 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:09,223 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:11,248 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:13,273 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:15,298 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:17,323 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:19,348 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:21,373 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:23,398 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:25,423 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:27,448 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:29,473 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:31,536 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:33,560 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:35,585 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:37,610 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:39,635 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:41,660 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:43,723 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:45,710 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:47,735 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:49,761 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:51,786 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:53,811 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:55,836 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:57,860 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:13:59,885 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:01,910 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:03,935 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:05,960 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:07,985 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:10,089 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:12,074 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:14,099 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:16,123 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:18,148 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:20,173 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:22,198 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:24,223 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:26,248 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:28,273 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:30,298 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:32,362 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:34,386 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:36,411 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:38,436 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:40,461 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:42,486 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:43,547 - aiot - INFO - 已断开与GPS设备的连接
+2025-07-15 11:14:43,548 - aiot - INFO - GPS控制器已停止
+2025-07-15 11:14:46,989 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 11:14:46,991 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 11:14:47,022 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 11:14:47,023 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 11:14:48,107 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 11:14:48,107 - aiot - INFO - 启动GPS控制器
+2025-07-15 11:14:48,107 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 11:14:48,141 - aiot - INFO - 成功连接到GPS设备并启用通知
+2025-07-15 11:14:49,272 - aiot - DEBUG - 发送命令: STATUS
+2025-07-15 11:14:49,272 - aiot - INFO - GPS控制器已启动，开始接收数据
+2025-07-15 11:14:49,272 - aiot - INFO - GPS设备自动重连检测线程已启动
+2025-07-15 11:14:49,274 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:49,275 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:50,585 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:52,611 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:54,636 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:56,661 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:14:58,685 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:00,711 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:02,740 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:04,761 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:06,785 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:08,848 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:10,873 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:12,898 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:14,923 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:16,948 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:18,973 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:20,998 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:23,027 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:25,052 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:27,073 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:29,098 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:31,123 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:33,148 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:34,065 - aiot - INFO - 已断开与GPS设备的连接
+2025-07-15 11:15:34,065 - aiot - INFO - GPS控制器已停止
+2025-07-15 11:15:37,458 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 11:15:37,460 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 11:15:37,493 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 11:15:37,494 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 11:15:38,577 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 11:15:38,577 - aiot - INFO - 启动GPS控制器
+2025-07-15 11:15:38,577 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 11:15:38,614 - aiot - WARNING - 主动读取特征值失败: 'Characteristic' object has no attribute 'read_value'
+2025-07-15 11:15:38,615 - aiot - INFO - 成功连接到GPS设备并启用通知
+2025-07-15 11:15:39,747 - aiot - DEBUG - 发送命令: STATUS
+2025-07-15 11:15:39,747 - aiot - INFO - GPS控制器已启动，开始接收数据
+2025-07-15 11:15:39,747 - aiot - INFO - GPS设备自动重连检测线程已启动
+2025-07-15 11:15:39,749 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:39,750 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:41,248 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:43,311 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:45,336 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:47,361 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:49,386 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:51,410 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:53,435 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:55,461 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:57,486 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:15:59,511 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:01,535 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:03,560 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:05,636 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:07,611 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:09,635 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:11,661 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:13,686 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:15,748 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:17,773 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:19,801 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:21,828 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:23,848 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:25,873 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:27,898 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:29,923 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:31,948 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:33,418 - aiot - INFO - 已断开与GPS设备的连接
+2025-07-15 11:16:33,419 - aiot - INFO - GPS控制器已停止
+2025-07-15 11:16:37,855 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 11:16:37,857 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 11:16:37,888 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 11:16:37,889 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 11:16:38,998 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 11:16:38,998 - aiot - INFO - 启动GPS控制器
+2025-07-15 11:16:38,999 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 11:16:39,186 - aiot - INFO - 成功连接到GPS设备并启用通知
+2025-07-15 11:16:40,234 - aiot - DEBUG - 发送命令: STATUS
+2025-07-15 11:16:40,234 - aiot - INFO - GPS控制器已启动，开始接收数据
+2025-07-15 11:16:40,235 - aiot - INFO - GPS设备自动重连检测线程已启动
+2025-07-15 11:16:40,236 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:40,236 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:40,237 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:40,237 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:42,073 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:44,098 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:46,161 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:48,192 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:50,211 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:52,236 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:54,261 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:56,286 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:16:58,311 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:17:00,336 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:17:02,361 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:17:04,386 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:17:06,411 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:17:08,436 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:17:10,461 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:17:12,486 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:17:14,511 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:17:44,852 - aiot - INFO - 已断开与GPS设备的连接
+2025-07-15 11:17:44,852 - aiot - INFO - GPS控制器已停止
+2025-07-15 11:17:48,898 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 11:17:48,900 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 11:17:48,931 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 11:17:48,932 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 11:17:50,009 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 11:17:50,009 - aiot - INFO - 启动GPS控制器
+2025-07-15 11:17:50,009 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 11:17:50,021 - aiot - ERROR - 连接GPS设备时出错: Cannot find a device: 80:64:6F:1C:77:E2 using adapter: D8:3A:DD:A2:5C:68
+2025-07-15 11:17:50,021 - aiot - ERROR - 无法连接到GPS设备，退出运行
+2025-07-15 11:17:50,021 - aiot - INFO - GPS控制器已停止
+2025-07-15 11:18:18,113 - aiot - INFO - 退出程序
+2025-07-15 11:18:21,753 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 11:18:21,755 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 11:18:21,791 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 11:18:21,792 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 11:18:22,870 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 11:18:22,871 - aiot - INFO - 启动GPS控制器
+2025-07-15 11:18:22,871 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 11:18:22,886 - aiot - ERROR - 连接GPS设备时出错: Cannot find a device: 80:64:6F:1C:77:E2 using adapter: D8:3A:DD:A2:5C:68
+2025-07-15 11:18:22,886 - aiot - ERROR - 无法连接到GPS设备，退出运行
+2025-07-15 11:18:22,886 - aiot - INFO - GPS控制器已停止
+2025-07-15 11:19:03,539 - aiot - INFO - 
+程序被中断，退出...
+2025-07-15 11:19:07,338 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 11:19:07,340 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 11:19:07,369 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 11:19:07,370 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 11:19:09,463 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 11:19:09,463 - aiot - INFO - 启动GPS控制器
+2025-07-15 11:19:09,464 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 11:19:12,063 - aiot - INFO - 成功连接到GPS设备并启用通知
+2025-07-15 11:19:13,149 - aiot - DEBUG - 发送命令: STATUS
+2025-07-15 11:19:13,149 - aiot - INFO - GPS控制器已启动，开始接收数据
+2025-07-15 11:19:13,150 - aiot - INFO - GPS设备自动重连检测线程已启动
+2025-07-15 11:19:13,423 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:13,424 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:13,425 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:13,900 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:15,925 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:17,987 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:19,975 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:22,000 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:24,025 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:26,050 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:28,113 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:30,138 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:32,238 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:34,188 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:36,213 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:38,275 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:40,263 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:42,288 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:44,463 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:46,338 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:48,363 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:50,425 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:52,450 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:54,475 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:56,575 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:19:58,526 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:00,588 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:02,613 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:04,600 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:06,625 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:08,800 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:10,713 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:12,775 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:14,763 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:16,750 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:18,776 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:20,801 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:22,938 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:24,890 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:26,950 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:28,938 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:31,000 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:33,025 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:35,088 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:37,151 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:39,138 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:41,088 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:43,151 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:45,176 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:47,201 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:49,301 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:51,251 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:53,276 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:55,338 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:57,363 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:20:59,351 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:21:01,376 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:21:03,438 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:21:05,426 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:21:07,488 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:21:09,476 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:21:11,501 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:21:13,563 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:21:15,626 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:21:17,613 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 11:21:17,984 - aiot - INFO - 已断开与GPS设备的连接
+2025-07-15 11:21:17,984 - aiot - INFO - GPS控制器已停止
+2025-07-15 13:17:42,473 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 13:17:42,476 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 13:17:42,506 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 13:17:42,511 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 13:17:44,674 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 13:17:44,674 - aiot - INFO - 启动GPS控制器
+2025-07-15 13:17:44,674 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 13:17:47,140 - aiot - INFO - 成功连接到GPS设备并启用通知
+2025-07-15 13:17:48,211 - aiot - DEBUG - 发送命令: STATUS
+2025-07-15 13:17:48,211 - aiot - INFO - GPS控制器已启动，开始接收数据
+2025-07-15 13:17:48,211 - aiot - INFO - GPS设备自动重连检测线程已启动
+2025-07-15 13:17:48,442 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:17:48,443 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:17:48,443 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:17:49,090 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:17:51,040 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:17:53,039 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:17:55,086 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:17:57,085 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:17:59,084 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:01,083 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:03,130 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:05,129 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:07,128 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:09,175 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:11,223 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:13,173 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:15,171 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:17,219 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:19,218 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:21,217 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:23,215 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:25,263 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:27,262 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:29,260 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:31,308 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:33,307 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:35,354 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:37,304 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:39,352 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:41,350 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:43,398 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:45,348 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:47,397 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:49,396 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:51,393 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:53,441 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:55,439 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:57,438 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:18:59,437 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:01,533 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:03,483 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:05,482 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:07,529 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:09,528 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:11,527 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:13,526 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:15,573 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:17,572 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:19,571 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:21,569 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:23,617 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:25,616 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:27,615 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:29,662 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:31,661 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:33,660 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:35,659 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:37,706 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:39,705 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:41,703 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:43,751 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:45,750 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:47,846 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:49,747 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:51,796 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:53,794 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:55,792 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:57,889 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:19:59,839 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:20:01,838 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:20:03,836 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:20:05,884 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:20:07,883 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:20:09,930 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:20:11,711 - aiot - INFO - 已断开与GPS设备的连接
+2025-07-15 13:20:11,711 - aiot - INFO - GPS控制器已停止
+2025-07-15 13:20:31,472 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 13:20:31,474 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 13:20:31,504 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 13:20:31,505 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 13:20:33,596 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 13:20:33,596 - aiot - INFO - 启动GPS控制器
+2025-07-15 13:20:33,596 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 13:20:35,114 - aiot - INFO - 成功连接到GPS设备并启用通知
+2025-07-15 13:20:36,185 - aiot - DEBUG - 发送命令: STATUS
+2025-07-15 13:20:36,185 - aiot - INFO - GPS控制器已启动，开始接收数据
+2025-07-15 13:20:36,185 - aiot - ERROR - GPS控制器运行时出错: 'GPSController' object has no attribute '_auto_reconnect_loop'
+2025-07-15 13:20:36,186 - aiot - INFO - 已断开与GPS设备的连接
+2025-07-15 13:20:36,186 - aiot - INFO - GPS控制器已停止
+2025-07-15 13:21:13,087 - aiot - INFO - 退出程序
+2025-07-15 13:21:22,999 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 13:21:23,000 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 13:21:23,030 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 13:21:23,031 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 13:21:25,123 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 13:21:25,123 - aiot - INFO - 启动GPS控制器
+2025-07-15 13:21:25,123 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 13:21:25,327 - aiot - INFO - 成功连接到GPS设备并启用通知
+2025-07-15 13:21:26,398 - aiot - DEBUG - 发送命令: STATUS
+2025-07-15 13:21:26,398 - aiot - INFO - GPS控制器已启动，开始接收数据
+2025-07-15 13:21:26,399 - aiot - INFO - GPS设备自动重连检测线程已启动
+2025-07-15 13:21:26,399 - aiot - INFO - GPS数据主动轮询线程已启动
+2025-07-15 13:21:26,496 - aiot - INFO - GPS设备在线
+2025-07-15 13:21:26,671 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:26,671 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:26,672 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:26,672 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:26,672 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:28,301 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:28,593 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 61612}
+2025-07-15 13:21:28,594 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:30,300 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:30,690 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 63624}
+2025-07-15 13:21:30,690 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:32,299 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:32,786 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 65637}
+2025-07-15 13:21:32,786 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:34,297 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:34,882 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 67649}
+2025-07-15 13:21:34,883 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:36,345 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:36,978 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 69661}
+2025-07-15 13:21:36,979 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:38,344 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:39,075 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 71675}
+2025-07-15 13:21:39,075 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:40,342 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:41,171 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:41,172 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 73687}
+2025-07-15 13:21:42,390 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:43,267 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 75700}
+2025-07-15 13:21:43,268 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:44,389 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:45,364 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 77713}
+2025-07-15 13:21:45,364 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:46,387 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:47,460 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 79725}
+2025-07-15 13:21:47,460 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:48,386 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:49,556 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 81738}
+2025-07-15 13:21:49,557 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:50,434 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:51,653 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 83750}
+2025-07-15 13:21:51,653 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:52,432 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:53,749 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:53,749 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 85762}
+2025-07-15 13:21:54,431 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:55,845 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 87775}
+2025-07-15 13:21:55,845 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:56,479 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:57,941 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 89787}
+2025-07-15 13:21:57,942 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:21:58,477 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:00,037 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:00,037 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 91800}
+2025-07-15 13:22:00,476 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:02,133 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:02,134 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 93812}
+2025-07-15 13:22:02,475 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:04,230 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:04,230 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 95824}
+2025-07-15 13:22:04,523 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:06,326 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:06,327 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 97836}
+2025-07-15 13:22:06,521 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:08,423 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:08,423 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 99848}
+2025-07-15 13:22:08,520 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:10,519 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:10,519 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 101860}
+2025-07-15 13:22:10,568 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:12,566 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:12,615 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 105885}
+2025-07-15 13:22:12,616 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:14,565 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:14,711 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:14,712 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 107898}
+2025-07-15 13:22:16,564 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:16,808 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:16,808 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 109911}
+2025-07-15 13:22:18,612 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:18,904 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:18,904 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 111923}
+2025-07-15 13:22:20,610 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:21,000 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:21,001 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 113936}
+2025-07-15 13:22:22,609 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:23,097 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 115948}
+2025-07-15 13:22:23,097 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:24,608 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:25,193 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:25,193 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 117960}
+2025-07-15 13:22:26,655 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:27,289 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:27,289 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 119973}
+2025-07-15 13:22:28,654 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:29,385 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 121985}
+2025-07-15 13:22:29,386 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:30,702 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:31,482 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 123997}
+2025-07-15 13:22:31,482 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:32,700 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:33,578 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 126010}
+2025-07-15 13:22:33,578 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:34,699 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:35,674 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 128022}
+2025-07-15 13:22:35,675 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:36,698 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:37,772 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 130034}
+2025-07-15 13:22:37,773 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:38,697 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:39,872 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:39,875 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 132046}
+2025-07-15 13:22:40,744 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:41,963 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:41,963 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 134058}
+2025-07-15 13:22:42,743 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:44,059 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:44,060 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 136071}
+2025-07-15 13:22:44,742 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:46,156 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:46,156 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 138083}
+2025-07-15 13:22:46,789 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:48,252 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:48,252 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 140095}
+2025-07-15 13:22:48,788 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:50,348 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 142108}
+2025-07-15 13:22:50,348 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:50,787 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:52,444 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 144120}
+2025-07-15 13:22:52,445 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:52,786 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:54,541 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:54,541 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 146132}
+2025-07-15 13:22:54,833 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:56,637 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:56,637 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 148144}
+2025-07-15 13:22:56,832 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:58,733 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:22:58,733 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 150156}
+2025-07-15 13:22:58,831 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:00,829 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:00,830 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 152169}
+2025-07-15 13:23:00,831 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:02,877 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:02,926 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:02,926 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 156193}
+2025-07-15 13:23:04,876 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:05,022 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:05,022 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 158207}
+2025-07-15 13:23:06,875 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:07,118 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:07,119 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 160219}
+2025-07-15 13:23:08,922 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:09,214 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 162231}
+2025-07-15 13:23:09,215 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:10,921 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:11,311 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 164243}
+2025-07-15 13:23:11,311 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:12,920 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:13,407 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 166255}
+2025-07-15 13:23:13,407 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:14,918 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:15,503 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 168268}
+2025-07-15 13:23:15,503 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:16,966 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:17,599 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 170280}
+2025-07-15 13:23:17,600 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:18,965 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:19,696 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 172292}
+2025-07-15 13:23:19,696 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:20,963 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:21,792 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 174306}
+2025-07-15 13:23:21,792 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:23,011 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:23,888 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:23,889 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 176318}
+2025-07-15 13:23:25,010 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:25,984 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:25,985 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 178330}
+2025-07-15 13:23:27,008 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:28,081 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:28,081 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 180343}
+2025-07-15 13:23:29,007 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:30,177 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:30,178 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 182355}
+2025-07-15 13:23:31,055 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:32,274 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:32,274 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 184368}
+2025-07-15 13:23:33,054 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:34,370 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:34,370 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 186380}
+2025-07-15 13:23:35,052 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:36,466 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:36,467 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 188392}
+2025-07-15 13:23:37,051 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:38,562 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:38,563 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 190406}
+2025-07-15 13:23:39,099 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:40,659 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 192418}
+2025-07-15 13:23:40,659 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:41,097 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:42,755 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 194430}
+2025-07-15 13:23:42,755 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:43,096 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:44,852 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 196442}
+2025-07-15 13:23:44,852 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:45,144 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:46,947 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 198454}
+2025-07-15 13:23:46,948 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:47,143 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:49,044 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 200466}
+2025-07-15 13:23:49,044 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:49,141 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:51,140 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 202478}
+2025-07-15 13:23:51,140 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:51,141 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:53,188 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:53,236 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:53,237 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 206504}
+2025-07-15 13:23:55,186 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:55,332 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:55,333 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 208516}
+2025-07-15 13:23:57,185 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:57,429 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:57,429 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 210528}
+2025-07-15 13:23:59,232 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:23:59,526 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 212541}
+2025-07-15 13:23:59,526 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:01,231 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:01,621 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:01,622 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 214553}
+2025-07-15 13:24:03,230 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:03,717 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:03,718 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 216566}
+2025-07-15 13:24:05,229 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:05,814 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:05,814 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 218578}
+2025-07-15 13:24:07,277 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:07,910 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:07,910 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 220590}
+2025-07-15 13:24:09,275 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:10,006 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:10,007 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 222604}
+2025-07-15 13:24:11,274 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:12,103 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:12,103 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 224617}
+2025-07-15 13:24:13,322 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:14,199 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:14,199 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 226629}
+2025-07-15 13:24:15,320 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:16,295 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:16,295 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 228642}
+2025-07-15 13:24:17,319 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:18,391 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 230654}
+2025-07-15 13:24:18,392 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:19,318 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:20,488 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 232666}
+2025-07-15 13:24:20,488 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:21,365 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:22,584 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 234679}
+2025-07-15 13:24:22,584 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:23,364 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:24,680 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 236691}
+2025-07-15 13:24:24,681 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:25,363 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:26,777 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 238704}
+2025-07-15 13:24:26,777 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:27,362 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:28,874 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 240717}
+2025-07-15 13:24:28,874 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:29,409 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:30,969 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 242730}
+2025-07-15 13:24:30,970 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:31,408 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:33,065 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 244743}
+2025-07-15 13:24:33,066 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:33,407 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:35,162 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 246755}
+2025-07-15 13:24:35,162 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:35,454 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:37,307 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 248767}
+2025-07-15 13:24:37,307 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:37,453 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:39,403 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 250780}
+2025-07-15 13:24:39,403 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:39,452 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:41,452 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:41,499 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 254805}
+2025-07-15 13:24:41,500 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:43,498 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:43,596 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 256817}
+2025-07-15 13:24:43,596 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:45,497 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:45,692 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 258829}
+2025-07-15 13:24:45,692 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:47,496 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:47,788 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 260841}
+2025-07-15 13:24:47,789 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:49,543 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:49,885 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 262853}
+2025-07-15 13:24:49,885 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:51,542 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:51,980 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 264865}
+2025-07-15 13:24:51,981 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:53,541 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:54,077 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 266878}
+2025-07-15 13:24:54,077 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:55,539 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:56,173 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 268890}
+2025-07-15 13:24:56,173 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:57,587 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:58,269 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 270903}
+2025-07-15 13:24:58,270 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:24:59,586 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:00,366 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 272915}
+2025-07-15 13:25:00,366 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:01,585 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:02,462 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 274927}
+2025-07-15 13:25:02,462 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:03,583 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:04,558 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 276939}
+2025-07-15 13:25:04,559 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:05,631 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:06,654 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 278951}
+2025-07-15 13:25:06,655 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:07,630 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:08,753 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 280963}
+2025-07-15 13:25:08,753 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:09,629 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:10,847 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:10,847 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 282976}
+2025-07-15 13:25:11,676 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:12,943 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:12,943 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 284988}
+2025-07-15 13:25:13,674 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:15,039 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:15,040 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 287000}
+2025-07-15 13:25:15,673 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:17,136 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:17,136 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 289013}
+2025-07-15 13:25:17,672 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:19,232 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:19,233 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 291025}
+2025-07-15 13:25:19,720 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:21,328 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:21,329 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 293037}
+2025-07-15 13:25:21,719 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:23,425 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:23,425 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 295049}
+2025-07-15 13:25:23,717 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:25,521 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:25,521 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 297061}
+2025-07-15 13:25:25,765 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:27,617 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 299074}
+2025-07-15 13:25:27,618 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:27,764 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:29,714 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 301086}
+2025-07-15 13:25:29,714 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:29,762 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:31,762 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:31,810 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 305111}
+2025-07-15 13:25:31,810 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:33,809 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:33,906 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 307123}
+2025-07-15 13:25:33,906 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:35,807 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:36,002 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:36,003 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 309135}
+2025-07-15 13:25:37,806 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:38,099 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:38,099 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 311147}
+2025-07-15 13:25:39,805 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:40,195 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:40,195 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 313159}
+2025-07-15 13:25:41,852 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:42,291 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:42,291 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 315171}
+2025-07-15 13:25:43,851 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:44,387 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:44,388 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 317183}
+2025-07-15 13:25:45,850 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:46,484 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:46,484 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 319195}
+2025-07-15 13:25:47,898 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:48,580 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 321209}
+2025-07-15 13:25:48,580 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:49,896 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:50,676 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 323221}
+2025-07-15 13:25:50,677 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:51,895 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:52,772 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 325233}
+2025-07-15 13:25:52,773 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:53,894 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:54,869 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 327246}
+2025-07-15 13:25:54,869 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:55,941 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:56,965 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 329258}
+2025-07-15 13:25:56,965 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:57,940 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:59,061 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 331270}
+2025-07-15 13:25:59,062 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:25:59,939 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:01,158 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 333282}
+2025-07-15 13:26:01,158 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:01,938 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:03,254 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 335294}
+2025-07-15 13:26:03,254 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:03,985 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:05,356 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 337307}
+2025-07-15 13:26:05,357 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:05,984 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:07,446 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 339319}
+2025-07-15 13:26:07,447 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:07,983 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:09,548 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 341331}
+2025-07-15 13:26:09,548 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:10,031 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:11,639 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:11,639 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 343344}
+2025-07-15 13:26:12,030 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:13,735 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:13,736 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 345356}
+2025-07-15 13:26:14,028 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:15,832 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 347368}
+2025-07-15 13:26:15,832 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:16,026 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:17,928 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 349381}
+2025-07-15 13:26:17,928 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:18,074 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:20,024 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:20,024 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 351393}
+2025-07-15 13:26:20,073 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:22,072 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:22,120 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 355419}
+2025-07-15 13:26:22,121 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:24,120 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:24,217 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:24,217 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 357431}
+2025-07-15 13:26:26,123 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:26,313 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:26,313 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 359443}
+2025-07-15 13:26:28,116 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:28,409 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 361455}
+2025-07-15 13:26:28,409 - aiot - DEBUG - 收到未知响应: org.bluez.GattCharacteristic1
+2025-07-15 13:26:29,417 - aiot - INFO - 已断开与GPS设备的连接
+2025-07-15 13:26:29,417 - aiot - INFO - GPS控制器已停止
+2025-07-15 13:26:35,998 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-15 13:26:36,000 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-15 13:26:36,030 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-15 13:26:36,031 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-15 13:26:38,130 - aiot - INFO - GPSController 实例化成功，MAC地址: 80:64:6F:1C:77:E2
+2025-07-15 13:26:38,130 - aiot - INFO - 启动GPS控制器
+2025-07-15 13:26:38,130 - aiot - INFO - 尝试连接到设备: 80:64:6F:1C:77:E2
+2025-07-15 13:26:38,354 - aiot - INFO - 成功连接到GPS设备并启用通知
+2025-07-15 13:26:39,425 - aiot - DEBUG - 发送命令: STATUS
+2025-07-15 13:26:39,426 - aiot - INFO - GPS控制器已启动，开始接收数据
+2025-07-15 13:26:39,426 - aiot - INFO - GPS设备自动重连检测线程已启动
+2025-07-15 13:26:39,426 - aiot - INFO - GPS数据主动轮询线程已启动
+2025-07-15 13:26:39,524 - aiot - INFO - GPS设备在线
+2025-07-15 13:26:41,620 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 373529}
+2025-07-15 13:26:43,717 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 375542}
+2025-07-15 13:26:45,813 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 377554}
+2025-07-15 13:26:47,909 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 379567}
+2025-07-15 13:26:50,005 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 381579}
+2025-07-15 13:26:52,102 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 383591}
+2025-07-15 13:26:54,208 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 385604}
+2025-07-15 13:26:56,296 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 387616}
+2025-07-15 13:26:58,391 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 391642}
+2025-07-15 13:27:00,487 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 393654}
+2025-07-15 13:27:02,583 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 395666}
+2025-07-15 13:27:04,680 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 397680}
+2025-07-15 13:27:06,776 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 399692}
+2025-07-15 13:27:08,872 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 401705}
+2025-07-15 13:27:10,969 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 403718}
+2025-07-15 13:27:13,065 - aiot - DEBUG - GPS数据无效或不完整: {'valid': 'V', 'latitude': '', 'longitude': '', 'speed': '', 'timestamp': 405730}
+2025-07-15 13:27:14,343 - aiot - INFO - 已断开与GPS设备的连接
+2025-07-15 13:27:14,343 - aiot - INFO - GPS控制器已停止
+2025-07-16 20:36:14,691 - aiot - INFO - 日志级别设置为: DEBUG
+2025-07-16 20:36:14,692 - aiot - INFO - Welcome to use P.U.L.S.E.!
+2025-07-16 20:36:14,923 - aiot - INFO - 成功连接到 PostgreSQL 数据库
+2025-07-16 20:36:14,956 - aiot - INFO - 数据库表已创建或已存在。
+2025-07-16 20:36:16,094 - aiot - ERROR - Failed to start Band service: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /opt/homebrew/var/run/dbus/system_bus_socket: No such file or directory
+2025-07-16 20:36:16,096 - aiot - ERROR - Failed to start Scale service: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /opt/homebrew/var/run/dbus/system_bus_socket: No such file or directory
+2025-07-16 20:36:16,466 - aiot - ERROR - Failed to start GPS service: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /opt/homebrew/var/run/dbus/system_bus_socket: No such file or directory
+2025-07-16 20:36:16,466 - aiot - INFO - 正在启动API服务器...
+2025-07-16 20:36:16,468 - aiot - INFO - API服务器进程已启动
+2025-07-16 20:36:16,468 - aiot - INFO - API服务器进程已启动
+2025-07-16 20:36:22,155 - aiot - INFO - SportDataHandler 实例化成功
+2025-07-16 20:36:22,242 - aiot - INFO - 初始化姿态为最近一次记录: sit
+2025-07-16 20:36:22,284 - aiot - INFO - 初始化步数为今天最新一次记录: 1192
+2025-07-16 20:36:22,284 - aiot - INFO - 步数识别循环已启动
+2025-07-16 20:36:22,284 - aiot - INFO - 已在主线程注册信号处理器
+2025-07-16 20:36:22,291 - aiot - INFO - 新的一天开始，重置步数为今天最新记录: 1192
+2025-07-16 20:36:22,296 - aiot - INFO - 用户年龄初始化为: 3000
+2025-07-16 20:36:22,304 - aiot - INFO - 用户质量初始化为: 6000.0 kg
+2025-07-16 20:36:22,325 - aiot - INFO - 用户性别初始化为: male
+2025-07-16 20:36:22,325 - aiot - INFO - 心率获取循环已启动
+2025-07-16 20:36:22,325 - aiot - INFO - 距离下次模型自动重训还有 4.39 小时
+2025-07-16 20:36:22,325 - aiot - INFO - 已启动每日凌晨1点自动重训定时任务
+2025-07-16 20:36:22,331 - aiot - WARNING - 速度数据时间与当前时间相差 77926.8 秒，超过5秒，速度设为0
+2025-07-16 20:36:22,334 - aiot - INFO - 识别到步数: 1192
+2025-07-16 20:36:22,337 - aiot - WARNING - 步频数据时间与当前时间相差 325.7 秒，超过5秒，步频设为0
+2025-07-16 20:36:22,343 - aiot - INFO - 最近一分钟步频: 0 步/分钟
+2025-07-16 20:36:22,396 - aiot - INFO - 成功存储预测心率数据: 71.8473937847937 bpm
+2025-07-16 20:36:22,415 - aiot - INFO - 当前姿态识别结果: sit
+2025-07-16 20:37:02,237 - aiot - INFO - 正在关闭所有服务...
+2025-07-16 20:37:02,239 - aiot - INFO - API服务器进程已正常终止
+2025-07-16 20:37:02,239 - aiot - INFO - 所有服务已停止，退出程序
+2025-07-16 20:37:02,239 - aiot - INFO - 正在关闭所有服务...
+2025-07-16 20:37:02,239 - aiot - INFO - API服务器进程已正常终止
+2025-07-16 20:37:02,239 - aiot - INFO - 所有服务已停止，退出程序
+2025-07-16 22:40:50,185 - aiot - INFO - SportDataHandler 实例化成功
+2025-07-16 22:40:50,632 - aiot - INFO - 初始化姿态为最近一次记录: sit
+2025-07-16 22:40:50,661 - aiot - INFO - 初始化步数为今天最新一次记录: 2320
+2025-07-16 22:40:50,661 - aiot - INFO - 步数识别循环已启动
+2025-07-16 22:40:50,661 - aiot - INFO - 已在主线程注册信号处理器
+2025-07-16 22:40:50,846 - aiot - INFO - 用户年龄初始化为: 6
+2025-07-16 22:40:50,846 - aiot - INFO - 新的一天开始，重置步数为今天最新记录: 2320
+2025-07-16 22:40:50,864 - aiot - INFO - 用户质量初始化为: 60.0 kg
+2025-07-16 22:40:50,885 - aiot - INFO - 用户性别初始化为: male
+2025-07-16 22:40:50,885 - aiot - INFO - 心率获取循环已启动
+2025-07-16 22:40:50,885 - aiot - INFO - 距离下次模型自动重训还有 2.32 小时
+2025-07-16 22:40:50,885 - aiot - INFO - 已启动每日凌晨1点自动重训定时任务
+2025-07-16 22:40:50,900 - aiot - INFO - 识别到步数: 2320
+2025-07-16 22:40:50,956 - aiot - INFO - 最近一分钟步频: 24 步/分钟
+2025-07-16 22:40:50,956 - aiot - WARNING - 速度数据时间与当前时间相差 1191.0 秒，超过5秒，速度设为0
+2025-07-16 22:40:51,026 - aiot - INFO - 当前步频: 24 步/分钟
+2025-07-16 22:40:51,028 - aiot - INFO - 当前姿态识别结果: sit

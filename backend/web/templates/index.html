@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Smart Health Management System</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Leaflet 地图CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <!-- Ant Design 样式CDN，建议放在 style.css 之前，以便你自定义覆盖 -->
+    <!--link rel="stylesheet" href="style.css"-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">SmartHealth</div>
+            <ul class="nav-menu">
+                <!-- Home 索引 -->
+                <li class="nav-item" id="home-nav">
+                    <div class="nav-header" data-content="home-section">
+                        <span>Home</span>
+                    </div>
+                </li>
+
+                <!-- 新增 Chatting 导航项 -->
+                <li class="nav-item" id="chatting-nav">
+                    <div class="nav-header" data-content="chatting">
+                        <span>Chatting</span>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="nav-header">
+                        <span>Exercise Tracking</span>
+                        <i class="fas fa-chevron-right arrow"></i>
+                    </div>
+                    <ul class="submenu">
+                        <li data-content="steps">Steps & Movement</li>
+                        <li data-content="hr-monitor">Heart Rate Monitor</li>
+                        <li data-content="workout-mode">Workout Mode</li>
+                        <li data-content="workout-records">Workout Records</li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-header" data-content="hydration-section">
+                        <span>Hydration</span>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-header">
+                        <span>Nutrition & Diet</span>
+                        <i class="fas fa-chevron-right arrow"></i>
+                    </div>
+                    <ul class="submenu">
+                        <li data-content="Nutrition Management">Nutrition Management</li>
+                        <li data-content="diet-suggestion">Diet Suggestion</li>
+                    </ul>
+                </li>
+                <li class="nav-item" id="-nav">
+                    <div class="nav-header" data-content="settings-panel">
+                        <span>Settings</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="user-profile">
+                <div class="avatar">JD</div>
+                <div class="user-info">
+                    <span class="username">John Doe</span>
+                    <span class="user-status">Active</span>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="content-header">
+                <h1 id="content-title">Welcome to P.U.L.S.E.</h1>
+            </header>
+            <section class="content-body">
+
+                <!-- ========== 新增 Home Section ========== -->
+                <div class="content-section active" id="home-section">
+                    <div class="home-dashboard">
+                        <!-- 第一排：步数 心率 喝水 -->
+                        <div class="home-row">
+                            <div class="home-card" id="home-steps">
+                                <div class="home-card-icon"><i class="fas fa-shoe-prints"></i></div>
+                                <div class="home-card-label">Steps</div>
+                                <div class="home-card-value" id="home-step-count">--</div>
+                            </div>
+                            <div class="home-card" id="home-hr">
+                                <div class="home-card-icon"><i class="fas fa-heartbeat"></i></div>
+                                <div class="home-card-label">Heart Rate</div>
+                                <div class="home-card-value" id="home-hr-value">--</div>
+                            </div>
+                            <div class="home-card" id="home-water">
+                                <div class="home-card-icon"><i class="fas fa-tint"></i></div>
+                                <div class="home-card-label">Water Intake</div>
+                                <div class="home-card-value" id="home-water-today">--</div>
+                            </div>
+                        </div>
+                        <!-- 第二排：吃卡路里+消卡路里（一个dashcard并排）+久坐提醒 -->
+                        <div class="home-row">
+                            <div class="home-dashcard" id="home-calories-dashcard">
+                                <div class="home-dashcard-block" id="home-calories-consumed">
+                                    <div class="home-dashcard-icon"><i class="fas fa-utensils"></i></div>
+                                    <div class="home-dashcard-label">Calories Consumed</div>
+                                    <div class="home-dashcard-value" id="home-calorie-consumed">--</div>
+                                </div>
+                                <div class="home-dashcard-block" id="home-calories-burned">
+                                    <div class="home-dashcard-icon"><i class="fas fa-fire-alt"></i></div>
+                                    <div class="home-dashcard-label">Calories Burned</div>
+                                    <div class="home-dashcard-value" id="home-calorie-burned">--</div>
+                                </div>
+                            </div>
+                            <div class="home-card home-sedentary" id="home-sedentary">
+                                <div class="home-card-label">Sedentary</div>
+                                <div class="sedentary-circle" id="sedentary-circle">
+                                    <div class="sedentary-dots" id="sedentary-dots"></div>
+                                    <div class="sedentary-center-num" id="sedentary-center-num">--</div>
+                                </div>
+                                <div class="home-card-tip" id="home-sedentary-tip"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Home Section -->
+
+                <div class="welcome-message active" id="welcome-section">
+                    <div class="welcome-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h2>Your Personal Health Assistant</h2>
+                    <p>Select a section from the sidebar to view or manage your health data.</p>
+                </div>
+                <!-- Steps & Movement -->
+                <div class="content-section" id="steps">
+                    <h3>Steps & Movement</h3>
+                    <div class="sensor-data">
+                        <div class="data-row">
+                            <div class="data-card">
+                                <div class="data-label">Steps Today</div>
+                                <div class="data-value" id="step-count">--</div>
+                            </div>
+                            <div class="data-card center-form-card">
+                                <div class="data-label">Set Steps Target</div>
+                                <input type="number" id="stepTargetInput" min="1" placeholder="Enter target" class="input-field">
+                                <button class="action-btn" id="setStepTargetBtn"><i class="fas fa-check"></i>Set</button>
+                            </div>
+                        </div>
+                        <div class="data-row">
+                            <div class="data-card data-card-full">
+                                <div class="data-label">Routine</div>
+                                <div id="routine-map-container">
+                                    <!-- 地图容器 -->
+                                    <div id="routine-map"></div>
+                                    <div id="routine-map-msg" class="routine-map-msg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Heart Rate Monitor -->
+                <div class="content-section" id="hr-monitor">
+                    <h3>Heart Rate Monitor</h3>
+                    <div class="sensor-data">
+                        <div class="data-card">
+                            <div class="data-label">Current Heart Rate</div>
+                            <div class="data-value" id="heart-rate-value">--</div>
+                        </div>
+                        <div class="data-card">
+                        <div class="data-label">Heart Rate History</div>
+                            <div class="history-nav">
+                                <button class="action-btn history-btn" id="prevHrDate"><i class="fas fa-angle-left"></i></button>
+                                <input type="date" id="hr-history-date" class="input-field">
+                                <button class="action-btn history-btn" id="nextHrDate"><i class="fas fa-angle-right"></i></button>
+                                <span class="time-range-row">
+                                    <input type="time" id="hr-history-from" class="input-field time-field large-time-field" step="1" value="00:00:00">
+                                    <span style="margin:0 3px;">-</span>
+                                    <input type="time" id="hr-history-to" class="input-field time-field large-time-field" step="1" value="23:59:59">
+                                    <button class="action-btn" id="loadHrHistoryBtn">Load History</button>
+                                </span>
+                            </div>
+                            <div class="history-list" id="hr-history-list"></div>
+                            <div id="hr-history-msg" style="text-align: center; margin-top: 10px; color: #888;"></div>
+                            <!-- 图表容器 -->
+                            <div class="chart-container" style="position: relative; height:300px; width:100%; margin-top: 15px;">
+                                <canvas id="heartRateChart"></canvas>
+                            </div>
+                        </div>
+                        <!-- <div class="data-card">
+                            <div class="data-label">Heart Rate Prediction</div>
+                            <div class="data-value" id="hr-predict">--</div>
+                        </div> -->
+                        <div class="data-card">
+                            <div class="data-label">Alarm</div>
+                            <!-- <div id="alarmIndicator" class="alarm-box normal">
+                                <i class="fas fa-bell"></i> Alarm
+                            </div> -->
+                            <div id="abnormal-records-container"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 运动模式（Workout Mode） -->
+                <div class="content-section" id="workout-mode">
+                    <h3>Workout Mode</h3>
+                    <div class="sensor-data start-workout-container">
+                        <div id="start-workout-section" class="data-card start-card">
+                            <div class="data-label">Select Exercise</div>
+                            <select id="exercise-type-select" class="input-field">
+                                <option value="pushup">Pushups</option>
+                                <option value="squat">Squats</option>
+                                <option value="running">Running</option>
+                            </select>
+                            <button id="start-workout-btn" class="action-btn">
+                                <i class="fas fa-play"></i> Start
+                            </button>
+                        </div>
+                        <!-- 开始运动弹窗 -->
+                        <div id="start-workout-modal" class="modal">
+                            <div class="modal-content">
+                                <h3 class="modal-title">Start New Workout</h3>
+                                <p>Are you sure you want to start this workout?</p>
+                                <div class="modal-buttons">
+                                    <button class="action-btn primary-btn" id="confirm-start-btn">Confirm</button>
+                                    <button class="action-btn danger-btn" id="cancel-start-btn">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 停止运动弹窗 -->
+                        <div id="stop-workout-modal" class="modal">
+                            <div class="modal-content">
+                                <h3 class="modal-title">Stop Workout</h3>
+                                <p>Are you sure you want to stop and save your workout?</p>
+                                <div class="modal-buttons">
+                                    <button class="action-btn primary-btn" id="confirm-stop-btn">Confirm</button>
+                                    <button class="action-btn danger-btn" id="cancel-stop-btn">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="status-display-section" class="data-card status-card">
+                            <div id="exercise-title" class="data-label"></div>
+                            <div class="realtime-data-container">
+                                <div class="data-card-small">
+                                    <div class="data-label">Time</div>
+                                    <div id="timer-display" class="data-value">00:00:00</div>
+                                </div>
+                                <div class="data-card-small">
+                                    <div class="data-label">Heart Rate</div>
+                                    <div id="heart-rate-display" class="data-value">--</div>
+                                </div>
+                                <div class="data-card-small" id="distance-card" style="display:none;">
+                                    <div class="data-label">Distance</div>
+                                    <div id="distance-display" class="data-value">--</div>
+                                </div>
+                                <div class="data-card-small" id="pace-card" style="display:none;">
+                                    <div class="data-label">Pace</div>
+                                    <div id="pace-display" class="data-value">--</div>
+                                </div>
+                                <div class="data-card-small">
+                                    <div class="data-label">Calories</div>
+                                    <div id="calories-display" class="data-value">--</div>
+                                </div>
+                                <div class="data-card-small" id="count-card">
+                                    <div class="data-label" id="count-label">Count</div>
+                                    <div id="count-display" class="data-value">0</div>
+                                </div>
+                                <div class="data-card-small" id="speed-card">
+                                    <div class="data-label">Speed</div>
+                                    <div id="speed-display" class="data-value">--</div>
+                                </div>
+                            </div>
+                            <button id="stop-workout-btn" class="action-btn danger-btn">
+                                <i class="fas fa-stop"></i> Stop
+                            </button>
+                            <div id="running-map-container" class="data-card-full" style="height: 300px; display: none;">
+                                <div id="running-map"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 运动记录（Workout Records） -->
+                <div class="content-section" id="workout-records">
+                    <h3>Workout Records</h3>
+                    <div class="filter-section">
+                        <select id="filter-type-select" class="input-field">
+                            <option value="">All Exercises</option>
+                            <option value="pushup">Pushups</option>
+                            <option value="squat">Squats</option>
+                            <option value="running">Running</option>
+                        </select>
+                        <div class="history-nav" style="justify-content: flex-start;">
+                            <button class="history-btn action-btn" id="prev-page-btn"><i class="fas fa-chevron-left"></i></button>
+                            <span id="page-info">Page 1 of 1</span>
+                            <button class="history-btn action-btn" id="next-page-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <table class="workout-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Exercise Type</th>
+                                <th>Duration</th>
+                                <th>Details</th>
+                                <th>Calories</th>
+                            </tr>
+                        </thead>
+                        <tbody id="records-table-body">
+                            <!-- 运动记录数据行由 JS 动态填充 -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Water Intake Records -->
+                <div class="content-section" id="hydration-section">
+                    <h3>Water Intake</h3>
+                    <div class="hydration-container">
+                        <!-- First row: Date selection (unchanged) -->
+                        <div class="hydration-date-row">
+                            <button class="action-btn history-btn" id="prevWaterDate">
+                                <i class="fas fa-angle-left"></i>
+                            </button>
+                            <input type="date" id="water-history-date" class="input-field hydration-date-input">
+                            <button class="action-btn history-btn" id="nextWaterDate">
+                                <i class="fas fa-angle-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- Second row: Two cards spanning the width evenly -->
+                        <div class="hydration-data-row" style="display:flex; justify-content:space-between; gap:20px; margin-bottom:10px;">
+                            <!-- Today's intake card -->
+                            <div class="data-card" style="flex:1; min-width:0; display:flex; flex-direction:column; justify-content:center;">
+                                <div class="data-label" style="margin-bottom:15px;">Intake Today</div>
+                                <div class="data-value" id="water-today" style="font-size:1.5em; text-align:center; margin-top:10px;">--</div>
+                            </div>
+
+                            <!-- Set target card -->
+                            <div class="data-card center-form-card" style="flex:1; min-width:0;">
+                                <div class="data-label">Set Water Target</div>
+                                <div style="display:flex; flex-direction:column; align-items:center;">
+                                    <input type="number" id="waterTargetInput" min="1" placeholder="ml"
+                                           class="input-field" style="height:32px; width:90px;">
+                                    <button class="action-btn" id="setWaterTargetBtn"
+                                            style="height:32px; font-size:1em; margin-top:8px;">
+                                        <i class="fas fa-check"></i> Set
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Third row: Suggestion (unchanged) -->
+                        <div class="data-card" style="width:100%; max-width:100%; border-radius:0; box-shadow:none; background:transparent; padding-top:0; padding-bottom:0;">
+                            <div class="data-label" style="text-align:center;">Suggestion</div>
+                            <div class="suggestion" id="water-suggestion" style="text-align:center; font-size:1.07em; color:#21a96b; background:rgba(44,120,255,0.05); border-radius:12px; padding:14px 8px; margin-top:6px;">
+                                Drinking plenty of water is good for your health.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nutrition Management -->
+                <div class="content-section" id="Nutrition Management">
+                    <div class="nutrition-header-row">
+                        <h3>Nutrition Management</h3>
+                        <button class="action-btn nutrition-new-btn" id="nutritionNewBtn"><i class="fas fa-plus"></i>New</button>
+                    </div>
+                    <div class="nutrition-pie-row">
+                        <div class="nutrition-date-row">
+                            <button class="action-btn history-btn" id="prevNutritionDate"><i class="fas fa-angle-left"></i></button>
+                            <input type="date" id="nutrition-date-picker" class="input-field" />
+                            <button class="action-btn history-btn" id="nextNutritionDate"><i class="fas fa-angle-right"></i></button>
+                            <button class="action-btn nutrition-check-btn" id="nutritionCheckBtn">
+                                <i class="fas fa-check"></i>Check
+                            </button>
+                        </div>
+                    </div>
+                    <div class="nutrition-meals-row">
+                    <div class="nutrition-meal-block">
+                        <div class="nutrition-meal-title">Breakfast</div>
+                        <div class="nutrition-meal-links" id="breakfastLinks"></div>
+                    </div>
+                    <div class="nutrition-meal-block">
+                        <div class="nutrition-meal-title">Lunch</div>
+                        <div class="nutrition-meal-links" id="lunchLinks"></div>
+                    </div>
+                    <div class="nutrition-meal-block">
+                        <div class="nutrition-meal-title">Dinner</div>
+                        <div class="nutrition-meal-links" id="dinnerLinks"></div>
+                    </div>
+                    <div class="nutrition-meal-block">
+                        <div class="nutrition-meal-title">Snack</div>
+                        <div class="nutrition-meal-links" id="snackLinks"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="content-section" id="photo-detail"></div>
+                <!-- Nutrition Intake Add Page -->
+                <div class="content-section" id="nutrition-new">
+                    <div class="nutrition-new-header-row">
+                        <h3>Add Nutrition Intake</h3>
+                        <button class="action-btn nutrition-back-btn" id="nutritionBackBtn"><i class="fas fa-arrow-left"></i>Back</button>
+                    </div>
+                    <div class="nutrition-new-center">
+                        <div class="nutrition-new-photo-preview">
+                            <img id="nutritionNewPhotoPreview" src="" alt="Pending upload" style="display:none;max-width:200px;">
+                            <div id="nutritionNewPhotoText">Pending upload image</div>
+                        </div>
+                        <div class="nutrition-new-meal-select-row">
+                            <button class="action-btn" id="nutritionMealTypeBtn">Breakfast</button>
+                            <div class="nutrition-meal-type-dropdown" id="nutritionMealTypeDropdown">
+                                <div data-type="Breakfast">Breakfast</div>
+                                <div data-type="Lunch">Lunch</div>
+                                <div data-type="Dinner">Dinner</div>
+                                <div data-type="Snack">Snack</div>
+                            </div>
+                        </div>
+                        <div class="nutrition-new-btn-row" style="display: flex; justify-content: center; gap: 18px;">
+                            <button class="action-btn" id="nutritionChooseFileBtn">
+                                <i class="fas fa-folder-open"></i> Choose file
+                            </button>
+                            <input type="file" id="nutritionMealPhotoInput" accept="image/*" style="display:none;">
+                            <button class="action-btn" id="nutritionUploadBtn">
+                                <i class="fas fa-upload"></i> Upload
+                            </button>
+                            <button class="action-btn" id="nutritionNewMeasureBtn" disabled>
+                                <i class="fas fa-balance-scale"></i> Weight measure
+                            </button>
+                        </div>
+                        <div id="nutritionUploadStatus" class="nutrition-new-status-row"></div>
+                        <div id="nutritionMassPopup" class="nutrition-mass-popup"></div>
+                    </div>
+                </div>
+                <!-- Diet Suggestion -->
+                <div class="content-section" id="diet-suggestion">
+                  <h3 style="text-align:center;">Diet Suggestion</h3>
+                  <div class="sensor-data">
+                    <!-- 日期选择行：与 Nutrition Management 样式统一 -->
+                    <!-- Diet Suggestion 日期选择（推荐结构） -->
+                    <div class="diet-row-flex" style="display:flex; justify-content:center; margin-bottom:12px;">
+                      <div class="nutrition-date-row" style="margin-top:0; margin-bottom:0;">
+                        <button class="action-btn history-btn" id="prevDietDate"><i class="fas fa-angle-left"></i></button>
+                        <input type="date" id="diet-date-picker" class="input-field" />
+                        <button class="action-btn history-btn" id="nextDietDate"><i class="fas fa-angle-right"></i></button>
+                        <!-- 没有check按钮 -->
+                      </div>
+                    </div>
+
+                    <!-- 两个设置卡片并排，间距更小 -->
+                    <div class="diet-row-flex" style="display:flex; justify-content:center; gap:18px; margin-bottom:10px;">
+                      <div class="data-card center-form-card" id="calorie-target-card" style="min-width:150px;">
+                        <div class="data-label">Set Calorie Target</div>
+                        <input type="number" id="calorieTargetInput" min="1" placeholder="kcal" class="input-field" style="height:32px;">
+                        <button class="action-btn" id="setCalorieTargetBtn" style="height:32px; font-size:1em;"><i class="fas fa-check"></i>Set</button>
+                      </div>
+                    </div>
+
+                    <!-- 消耗与摄入并排，间隔更小 -->
+                    <div class="diet-row-flex" style="display:flex; justify-content:center; gap:18px; margin-bottom:10px;">
+                      <div class="data-card" style="min-width:180px;">
+                        <div class="data-label">Calories Burned</div>
+                        <div class="data-value" id="calorie-burned" style="font-size:1.15em; text-align:center;">--</div>
+                      </div>
+                      <div class="data-card" style="min-width:180px;">
+                        <div class="data-label">Calories Consumed</div>
+                        <div class="data-value" id="calorie-consumed" style="font-size:1.15em; text-align:center;">--</div>
+                      </div>
+                    </div>
+
+                    <!-- 建议行，铺满宽度，间距更小 -->
+                    <div class="diet-row-flex" style="display:flex; justify-content:center;">
+                      <div class="data-card" style="width:100%; max-width:100%; border-radius:0; box-shadow:none; background:transparent; padding-top:0; padding-bottom:0;">
+                        <div class="data-label" style="text-align:center;">Suggestion</div>
+                        <div class="suggestion" id="diet-suggestion-text"
+                             style="text-align:center; font-size:1.07em; color:#21a96b; background:rgba(44,120,255,0.05); border-radius:12px; padding:14px 8px; margin-top:6px;">
+                          Eat a balanced diet of protein, vegetables, fruit, and whole grains.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- GPT Chatting 子页面 -->
+                <div class="content-section" id="chatting">
+                    <div class="chatting-container" style="max-width:520px;margin:32px auto 0 auto;padding:0 0 24px 0;">
+                        <div style="text-align:center;margin-bottom:18px;">
+                            <span style="font-size:1.45em;font-weight:600;color:#4e73df;letter-spacing:1px;">Personal Assistant</span>
+                        </div>
+                        <div id="chatting-body" style="background:linear-gradient(135deg,#f4f7fc 80%,#e8f0fe 100%);min-height:260px;max-height:340px;overflow-y:auto;padding:18px 12px 18px 12px;border-radius:1.2em;margin-bottom:18px;box-shadow:0 2px 12px 0 rgba(44,120,255,0.07);display:flex;flex-direction:column;gap:12px;"></div>
+                        <div style="display:flex;gap:10px;align-items:center;background:#fff;border-radius:1em;padding:10px 12px;box-shadow:0 2px 8px 0 rgba(44,120,255,0.04);">
+                            <input id="chatting-input" type="text" placeholder="Type your message..." style="flex:1;padding:10px 14px;border-radius:8px;border:1.5px solid #b6c6e6;font-size:1.12em;outline:none;transition:border 0.2s;">
+                            <button id="chatting-send-btn" style="background:linear-gradient(90deg,#4e73df 0%,#6ec6ff 100%);color:#fff;padding:10px 22px;border-radius:8px;border:none;font-size:1.13em;font-weight:bold;cursor:pointer;box-shadow:0 2px 8px 0 rgba(44,120,255,0.08);transition:background 0.2s;">Send</button>
+                        </div>
+                        <style>
+                        #chatting-body .chat-message {
+                            max-width: 82%;
+                            padding: 10px 16px;
+                            border-radius: 1.1em;
+                            margin-bottom: 2px;
+                            font-size: 1.08em;
+                            line-height: 1.6;
+                            word-break: break-word;
+                            box-shadow: 0 1px 6px 0 rgba(44,120,255,0.04);
+                        }
+                        #chatting-body .chat-message.user {
+                            background: linear-gradient(90deg,#d1f5e6 0%,#b6e3ff 100%);
+                            color: #1a3a3a;
+                            align-self: flex-end;
+                            border-bottom-right-radius: 0.4em;
+                            margin-left: 18%;
+                        }
+                        #chatting-body .chat-message.bot {
+                            background: linear-gradient(90deg,#e8eafc 0%,#f4f7fc 100%);
+                            color: #223366;
+                            align-self: flex-start;
+                            border-bottom-left-radius: 0.4em;
+                            margin-right: 18%;
+                        }
+                        #chatting-body .chat-message.bot strong { color: #4e73df; }
+                        #chatting-body .chat-message.user strong { color: #21a96b; }
+                        #chatting-input:focus {
+                            border: 1.5px solid #4e73df;
+                        }
+                        #chatting-send-btn:hover {
+                            background:linear-gradient(90deg,#6ec6ff 0%,#4e73df 100%);
+                        }
+                        </style>
+                    </div>
+                </div>
+                <!-- Settings -->
+                <div class="content-section" id="settings-panel">
+
+                    <div class="diet-row-flex" style="display:flex; justify-content:center; gap:32px; margin-top:32px; width:100%;">
+                        <!-- Set Age -->
+                        <div class="data-card center-form-card" id="set-age-card" style="flex:1 1 0; max-width:100%; min-width:0; min-height:180px;">
+                            <div class="data-label" style="font-size:1.15em; margin-bottom:16px;">Set Age</div>
+                            <input type="number" id="ageInput" min="1" placeholder="years" class="input-field" style="height:44px; font-size:1.15em;">
+                            <button class="action-btn" id="setAgeBtn" style="height:44px; font-size:1.1em; margin-top:18px;"><i class="fas fa-check"></i>Set</button>
+                        </div>
+                        <!-- Set Weight -->
+                        <div class="data-card center-form-card" id="set-weight-card" style="flex:1 1 0; max-width:100%; min-width:0; min-height:180px;">
+                            <div class="data-label" style="font-size:1.15em; margin-bottom:16px;">Set Weight</div>
+                            <input type="number" id="weightInput" min="1" placeholder="kg" class="input-field" style="height:44px; font-size:1.15em;">
+                            <button class="action-btn" id="setWeightBtn" style="height:44px; font-size:1.1em; margin-top:18px;"><i class="fas fa-check"></i>Set</button>
+                        </div>
+                        <!-- Set Gender -->
+                        <div class="data-card center-form-card" id="set-gender-card" style="flex:1 1 0; max-width:100%; min-width:0; min-height:180px;">
+                            <div class="data-label" style="font-size:1.15em; margin-bottom:16px;">Set Gender</div>
+                            <div id="genderOptions" style="display:flex; flex-direction:column; gap:18px; align-items:center; margin-bottom:18px;">
+                                <div class="gender-row" data-gender="male" style="display:flex; align-items:center; gap:12px; cursor:pointer;">
+                                    <span class="gender-circle" id="circle-male"></span>
+                                    <span style="font-size:1.13em;">&#9794; Male</span>
+                                </div>
+                                <div class="gender-row" data-gender="female" style="display:flex; align-items:center; gap:12px; cursor:pointer;">
+                                    <span class="gender-circle" id="circle-female"></span>
+                                    <span style="font-size:1.13em;">&#9792; Female</span>
+                                </div>
+                            </div>
+                            <button class="action-btn" id="setGenderBtn" style="height:44px; font-size:1.1em;"><i class="fas fa-check"></i>Set</button>
+                        </div>
+                    </div>
+                    <h3>General Settings</h3>
+                    <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 16px;">
+                        <!-- 调色盘部分 -->
+                        <div class="settings-row">
+                            <span style="font-size:1.05rem;">Theme color:</span>
+                            <div id="color-picker-btn" title="Customize Theme">
+                                <i class="fas fa-palette"></i>
+                                <input type="color" id="theme-color-input" title="Pick a color">
+                            </div>
+                        </div>
+                        <!-- 日夜模式切换部分 -->
+                        <div class="settings-row">
+                            <span style="font-size:1.05rem;">Day/Night mode:</span>
+                            <label class="bili-switch bili-switch-global" style="margin-bottom:0;">
+                                <input type="checkbox" id="biliSwitch" checked>
+                                <span class="slider">
+                                    <span class="icon sun-part">
+                                        <span class="sun-glow"></span>
+                                        <svg class="sun" width="28" height="28" viewBox="0 0 20 20">
+                                            <circle cx="10" cy="10" r="7" fill="#ffdf70"/>
+                                            <g stroke="#ffd966" stroke-width="1.4">
+                                                <line x1="10" y1="2" x2="10" y2="4"/>
+                                                <line x1="10" y1="16" x2="10" y2="18"/>
+                                                <line x1="2" y1="10" x2="4" y2="10"/>
+                                                <line x1="16" y1="10" x2="18" y2="10"/>
+                                                <line x1="4" y1="4" x2="5.7" y2="5.7"/>
+                                                <line x1="14.3" y1="5.7" x2="16" y2="4"/>
+                                                <line x1="4" y1="16" x2="5.7" y2="14.3"/>
+                                                <line x1="14.3" y1="14.3" x2="16" y2="16"/>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                    <span class="icon moon-part">
+                                        <svg class="moon" width="28" height="28" viewBox="0 0 28 28">
+                                            <defs>
+                                                <radialGradient id="moon-glow" cx="50%" cy="50%" r="60%">
+                                                    <stop offset="0%" stop-color="#fffbe6" stop-opacity="0.8"/>
+                                                    <stop offset="100%" stop-color="#fffbe6" stop-opacity="0"/>
+                                                </radialGradient>
+                                            </defs>
+                                            <circle cx="14" cy="14" r="12" fill="url(#moon-glow)" opacity="0.42"/>
+                                            <path d="M21.5 18.5
+                                                A8.5 8.5 0 0 1 14 6.5
+                                                A7.5 7.5 0 1 0 21.5 18.5
+                                                Z"
+                                                fill="#f7ecb5" stroke="#f1e2a7" stroke-width="1.1"/>
+                                            <ellipse cx="17.5" cy="11.5" rx="2.3" ry="1.1" fill="#e6dea9" opacity="0.33"/>
+                                            <ellipse cx="13.5" cy="16" rx="1.1" ry="0.65" fill="#e6dea9" opacity="0.19"/>
+                                            <ellipse cx="18.5" cy="15.5" rx="0.8" ry="0.45" fill="#ded695" opacity="0.23"/>
+                                        </svg>
+                                        <svg class="star star1" width="11" height="11" viewBox="0 0 11 11">
+                                            <polygon points="5.5,1 6.6,4.1 10,4.3 7.2,6.2 8.2,9.3 5.5,7.5 2.8,9.3 3.8,6.2 1,4.3 4.4,4.1"
+                                                fill="#fffbe6" stroke="#fff0b2" stroke-width="0.4"/>
+                                        </svg>
+                                        <svg class="star star2" width="8" height="8" viewBox="0 0 8 8">
+                                            <polygon points="4,0.8 4.7,2.7 6.6,2.8 5.1,4 5.7,5.8 4,4.7 2.3,5.8 2.9,4 1.4,2.8 3.3,2.7"
+                                                fill="#fffbe6" stroke="#fff0b2" stroke-width="0.3"/>
+                                        </svg>
+                                        <svg class="star star3" width="6" height="6" viewBox="0 0 6 6">
+                                            <polygon points="3,0.7 3.5,2 5,2.1 3.9,3 4.3,4.3 3,3.7 1.7,4.3 2.1,3 1,2.1 2.5,2"
+                                                fill="#fffbe6" stroke="#fff0b2" stroke-width="0.22"/>
+                                        </svg>
+                                    </span>
+                                    <span class="toggle-knob"></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- 聊天助手部分 -->
+                    <!--div class="settings-row">
+                        <span style="font-size:1.05rem;">Health Assistant Chat:</span>
+                        <button id="settings-chat-btn" class="action-btn" style="margin-bottom:0;">
+                            <i class="fas fa-comment-dots"></i>
+                            Open Chat
+                        </button>
+                    </div-->
+                </div>
+                <!-- 聊天对话框直接在settings-panel底下（display:none，点击按钮弹出） -->
+                <div id="settings-chat-dialog" style="display:none; flex-direction: column; width:360px; max-width:96vw; height:480px; max-height:80vh; background:#fff; border-radius:1.5em; box-shadow:0 14px 48px 0 rgba(44,120,255,0.20),0 4px 16px 0 rgba(44,200,141,0.07); overflow:hidden; position:relative; z-index:2001;">
+                    <div class="chat-header" style="background:linear-gradient(90deg, #6ec6ff 0%, #4e73df 100%); color:#fff; padding:16px 22px; display:flex; justify-content:space-between; align-items:center; font-weight:bold; font-size:1.15rem; border-bottom:1px solid #e3e6f0;">
+                        <span>Health Assistant Chat</span>
+                        <button id="settings-chat-close-btn" title="Close" style="background:transparent; border:none; color:#fff; font-size:1.25rem; cursor:pointer;"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="chat-body" id="settings-chat-body" style="background:#f4f7fc; padding:16px; min-height:120px; flex:1 1 0; max-height:320px; overflow-y:auto; font-size:1.05rem;"></div>
+                    <div class="chat-footer" style="display:flex; padding:11px 16px 13px 16px; border-top:1px solid #e3e6f0; background:#fff;">
+                        <input type="text" id="settings-chat-input" placeholder="Enter your message..." autocomplete="off" style="flex:1 1 0; border:1px solid #d4d9e1; border-radius:9px; padding:8px 11px; margin-right:8px; font-size:1.05rem; outline:none;">
+                        <button id="settings-chat-send-btn" style="background:linear-gradient(90deg, #4e73df 0%, #6ec6ff 100%); color:#fff; border:none; border-radius:8px; padding:0 16px; font-size:1.25rem; cursor:pointer; display:flex; align-items:center;"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const switcher = document.getElementById('biliSwitch');
+  const colorBtn = document.getElementById('color-picker-btn');
+  const colorInput = document.getElementById('theme-color-input');
+
+  // 设定初始主题色为蓝色
+  const DEFAULT_BLUE = "#66ccff";
+  colorInput.value = DEFAULT_BLUE;
+  document.documentElement.style.setProperty('--primary-color', DEFAULT_BLUE);
+
+  // 记录用户在白昼模式下最后选的主题色
+  let lastDayColor = colorInput.value || getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+
+  function updateThemeColor(color) {
+    // 仅在白昼模式下应用
+    if (!document.body.classList.contains('night-mode')) {
+      document.documentElement.style.setProperty('--primary-color', color);
+      const sidebar = document.querySelector('.sidebar');
+      if (sidebar) {
+        sidebar.style.background = `linear-gradient(180deg, ${color} 0%, #224abe 100%)`;
+      }
+      const buttons = document.querySelectorAll('.action-btn');
+      buttons.forEach(btn => btn.style.backgroundColor = color);
+    }
+  }
+
+  // 只要调色盘变色就保存
+  colorInput.addEventListener('input', () => {
+    lastDayColor = colorInput.value;
+    updateThemeColor(colorInput.value);
+  });
+
+  // 初始状态
+  function setNightMode(state) {
+    if (state) {
+      document.body.classList.remove('night-mode');
+    } else {
+      document.body.classList.add('night-mode');
+    }
+  }
+  setNightMode(switcher.checked);
+
+  // 切换白昼/夜间 & 恢复主题色
+  switcher.addEventListener('change', function() {
+    const isDay = this.checked;
+    setNightMode(isDay);
+
+    if (!isDay) {
+      // 进入夜间模式前记住当前白昼色
+      lastDayColor = colorInput.value;
+      // 切到夜间默认色
+      document.documentElement.style.setProperty('--primary-color', '#3e62a9');
+      const sidebar = document.querySelector('.sidebar');
+      if (sidebar) {
+        sidebar.style.background = 'linear-gradient(180deg, #181d29 0%, #151924 100%)';
+      }
+      const buttons = document.querySelectorAll('.action-btn');
+      buttons.forEach(btn => btn.style.backgroundColor = 'var(--primary-color)');
+    } else {
+      // 回到白昼时恢复 lastDayColor
+      if (lastDayColor) {
+        colorInput.value = lastDayColor;
+        updateThemeColor(lastDayColor);
+      }
+    }
+  });
+
+  // 页面初次加载时应用调色盘色
+  if (!document.body.classList.contains('night-mode')) {
+    updateThemeColor(DEFAULT_BLUE);
+  }
+});
+</script>
+    <!-- Leaflet 地图JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.1"></script>
+
+    <!--script src="script.js"></script-->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

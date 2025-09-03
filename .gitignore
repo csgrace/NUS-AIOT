@@ -1,0 +1,16 @@
+# 忽略 UECFOOD256 数据集文件夹
+backend/models/yolov11n/UECFOOD256/
+#
+# 忽略 macOS 的 .DS_Store 文件
+.DS_Store
+# 忽略 Python 编译的字节码文件
+*.pyc
+.pyc
+*/.pyc
+
+backend/models/GLM-4.1V-9B
+
+backend/datasets/walking/splited
+
+backend/datasets/walking_plus
+backend/datasets/stand
