@@ -3,6 +3,8 @@
 
 ## 项目简介
 本项目为新加坡国立大学AIoT暑期工作坊的综合实践项目，融合了物联网设备、AI模型、数据采集与分析、Web后端服务等多种技术，旨在实现运动健康数据采集、食品识别与营养分析、智能健身等功能。
+<img width="1280" height="722" alt="image" src="https://github.com/user-attachments/assets/08f0e8a0-e175-4ced-abe6-725cc870c3f6" />
+
 
 ## 目录结构
 ```
